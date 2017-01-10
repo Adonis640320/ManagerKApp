@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/clr_gray_light">
+
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/backarrow"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailsignupinfo_menubartitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/tab_control_history"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_1" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lblSep"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rlHeader"
+        android:background="@color/clr_gray_dark" />
+
+    <RelativeLayout
+        android:id="@+id/rlMonthSum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlHeader"
+        android:layout_margin="5dp"
+        android:background="@color/clr_yellow_01"
+        android:paddingBottom="8dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblMonth"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_3"
+            android:paddingRight="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblSelectDay"
+            android:layout_toRightOf="@+id/lblMonth"
+            android:text="날짜 선택"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_3"
+            android:background="@drawable/rounded_textview"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_centerVertical="true"
+            />
+
+        <TextView
+            android:id="@+id/lbl01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/lblSum"
+            android:text="총"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_3" />
+
+        <TextView
+            android:id="@+id/lblSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/lbl02"
+            android:text=""
+            android:textColor="@color/clr_red_dark"
+            android:textSize="@dimen/ftsize_3" />
+
+        <TextView
+            android:id="@+id/lbl02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="건"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_3" />
+
+    </RelativeLayout>
+
+    <com.sincere.kboss.utils.PullToRefreshListView
+        android:id="@+id/lstItems"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlMonthSum"
+        android:background="@color/clr_gray_light" />
+
+    <RelativeLayout
+        android:id="@+id/rlEmptyPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_below="@+id/rlMonthSum"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/no_workhistory"
+            android:textColor="@color/clr_red_dark"
+            android:textSize="@dimen/ftsize_3" />
+
+    </RelativeLayout>
+</RelativeLayout>

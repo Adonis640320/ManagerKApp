@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/clr_gray_light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:id="@+id/rlHeader">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/backarrow"
+            />
+
+        <TextView
+            android:id="@+id/detailsignupinfo_menubartitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/accountexit_title"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_1" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/lblSep"
+        android:background="@color/clr_gray_dark"
+        android:layout_below="@+id/rlHeader"/>
+
+    <com.todddavies.components.progressbar.ProgressWheel
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/pwLoading"
+        android:visibility="invisible"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llTop"
+            android:background="@color/clr_gray_light"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="2dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/accountexit_question"
+                android:textColor="#000000"
+                android:background="@android:color/white"
+                android:paddingTop="20dp"
+                android:textSize="@dimen/ftsize_2"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/accountexit_notation1"
+                android:textColor="@color/clr_red_dark"
+                android:background="@android:color/white"
+                android:paddingTop="10dp"
+                android:textSize="@dimen/ftsize_4"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/accountexit_notation2"
+                android:textColor="@color/clr_red_dark"
+                android:background="@android:color/white"
+                android:paddingTop="5dp"
+                android:textSize="@dimen/ftsize_4"
+                android:gravity="center"
+                android:paddingBottom="20dp"/>
+            <TextView android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:gravity="left|center_vertical"
+                android:background="@color/clr_gray_light"
+                android:text="@string/accountexit_commment"
+                android:textColor="#000000"
+                android:textSize="@dimen/ftsize_3"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llTop"
+            android:layout_above="@+id/btnLogout"
+            android:background="@android:color/white">
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lstReasons"
+                android:background="@color/clr_gray_light">
+            </ListView>
+        </RelativeLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnLogout"
+            android:text="@string/accountexit_exit"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_3"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/clr_red_dark"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

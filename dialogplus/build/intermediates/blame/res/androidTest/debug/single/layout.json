@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\dialogplus\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\base_container.xml",
+        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\dialogplus\\build\\intermediates\\bundles\\debug\\res\\layout\\base_container.xml"
+    },
+    {
+        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\dialogplus\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\dialog_view.xml",
+        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\dialogplus\\build\\intermediates\\bundles\\debug\\res\\layout\\dialog_view.xml"
+    },
+    {
+        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\dialogplus\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\dialog_list.xml",
+        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\dialogplus\\build\\intermediates\\bundles\\debug\\res\\layout\\dialog_list.xml"
+    },
+    {
+        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\dialogplus\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\dialog_grid.xml",
+        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\dialogplus\\build\\intermediates\\bundles\\debug\\res\\layout\\dialog_grid.xml"
+    }
+]

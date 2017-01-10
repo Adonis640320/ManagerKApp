@@ -1,0 +1,14 @@
+<resources>
+    <!--dimen name="ftsize_1">33sp</dimen>
+    <dimen name="ftsize_2">49sp</dimen>
+    <dimen name="ftsize_3">37sp</dimen>
+    <dimen name="ftsize_4">29sp</dimen>
+    <dimen name="ftsize_5">25sp</dimen>
+    <dimen name="ftsize_6">27sp</dimen-->
+
+    <dimen name="fontsize1">25sp</dimen>
+    <dimen name="fontsize2">20sp</dimen>
+
+    <dimen name="ftsize_content">25dp</dimen>
+
+</resources>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="10dp" android:background="@color/clr_gray_light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="19dp"
+        android:background="@android:color/white"
+        android:id="@+id/rlJobInfo">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblJobTitle"
+            android:text="광교 I-Park"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_7"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblWorkplace"
+            android:layout_below="@+id/lblJobTitle"
+            android:layout_marginTop="13dp"
+            android:text="경기도 수원시 영동구 원천동 593"
+            android:textColor="@color/clr_gray"
+            android:textSize="@dimen/ftsize_1"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_below="@+id/lblWorkplace">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgRegDate"
+                android:src="@drawable/month"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblRegDate"
+                android:layout_toRightOf="@+id/imgRegDate"
+                android:layout_marginLeft="2dp"
+                android:text="2016.09.28"
+                android:textColor="@color/clr_gray_dark"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgMoney"
+                android:layout_toRightOf="@+id/lblRegDate"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/money"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblMoney"
+                android:layout_toRightOf="@+id/imgMoney"
+                android:layout_marginLeft="2dp"
+                android:text="90,000"
+                android:textColor="@color/clr_gray_dark"
+                android:textSize="14sp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgSkills"
+                android:layout_toRightOf="@+id/lblMoney"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/attr3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblSkills"
+                android:layout_toRightOf="@+id/imgSkills"
+                android:layout_marginLeft="2dp"
+
+                android:text="@string/jobnotification_normalworker"
+                android:textColor="@color/clr_gray_dark"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/ivSigninCancel"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/signin_cancel"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"/>
+        <ImageView
+            android:id="@+id/ivSupportCancel"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/support_cancel"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llActions01"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/rlJobInfo"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn01"
+            android:layout_weight="1"
+            android:text="모집중"
+            android:background="@color/clr_yellow_02"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llActions02"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/rlJobInfo"
+        android:visibility="invisible"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn03"
+            android:layout_weight="1"
+            android:background="@color/clr_yellow_dark"
+            android:text="근로 지원중"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llActions03"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/rlJobInfo"
+        android:visibility="invisible"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn05"
+            android:layout_weight="1"
+            android:background="@color/clr_red_dark"
+            android:text="출근확정"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llActions04"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/rlJobInfo"
+        android:visibility="invisible"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn06"
+            android:layout_weight="1"
+            android:text="출근취소"
+            android:background="#96a6b7"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_1"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn07"
+            android:layout_weight="1"
+            android:background="#cfcfcf"
+            android:text="작업취소"
+            android:textColor="#808080"
+            android:textSize="@dimen/ftsize_1"
+            android:visibility="gone"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn08"
+            android:layout_weight="1"
+            android:background="#cfcfcf"
+            android:text="지원취소"
+            android:textColor="#808080"
+            android:textSize="@dimen/ftsize_1"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</RelativeLayout>

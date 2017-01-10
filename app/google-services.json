@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "541609219805",
+    "firebase_url": "https://kimsojang-ca49f.firebaseio.com",
+    "project_id": "kimsojang-ca49f",
+    "storage_bucket": "kimsojang-ca49f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:541609219805:android:5924423ced314db1",
+        "android_client_info": {
+          "package_name": "com.sincere.kboss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "541609219805-4midbb26dloqfghu81kupn9ff9s01jic.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sincere.kboss",
+            "certificate_hash": "4AF9198A11D2C2510313BD914F08B10AFA8EB4E5"
+          }
+        },
+        {
+          "client_id": "541609219805-mm2tup4t8f7cr03ck5vdu3s5hllcsm08.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sincere.kboss",
+            "certificate_hash": "54CE2BAF6B146CEC4681319D7F76A063D2F5EE8F"
+          }
+        },
+        {
+          "client_id": "541609219805-5ppnpih09lgctugdohkcfccu9uj5hbfk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBErMLkFK1hK0BK3SwdMAb0e_7i1Fa1Euo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "541609219805-5ppnpih09lgctugdohkcfccu9uj5hbfk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

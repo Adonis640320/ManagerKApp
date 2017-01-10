@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgFlag"
+        android:src="@drawable/job_not_flag"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblMessage"
+        android:layout_toRightOf="@+id/imgFlag"
+        android:layout_marginLeft="10dp"
+        android:text="@string/tab_setting_list_1_name"
+        android:textColor="@color/clr_blue_dark"
+        android:textSize="@dimen/ftsize_1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/lblDateTime"
+        android:layout_below="@+id/lblMessage"
+        android:layout_alignLeft="@+id/lblMessage"
+        android:layout_marginTop="5dp"
+        android:text="@string/tab_setting_list_1_content"
+        android:textColor="@color/clr_blue_dark"
+        android:textSize="@dimen/ftsize_1"/>
+</RelativeLayout>

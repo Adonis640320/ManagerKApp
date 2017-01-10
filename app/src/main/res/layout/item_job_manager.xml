@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="10dp" android:background="@color/clr_gray_light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:padding="19dp"
+        android:layout_centerVertical="true"
+        android:background="@android:color/white"
+        android:id="@+id/rlJobInfo">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblSkill"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblWorkerCount"
+            android:layout_toRightOf="@+id/lblSkill"
+            android:layout_marginLeft="5dp"
+            android:text=""
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_3"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:layout_below="@+id/lblSkill">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgRegDate"
+                android:src="@drawable/timer"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblStartTime"
+                android:layout_toRightOf="@+id/imgRegDate"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/clr_gray_dark"
+                android:textSize="@dimen/ftsize_5"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgMoney"
+                android:layout_toRightOf="@+id/lblStartTime"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/money"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblMoney"
+                android:layout_toRightOf="@+id/imgMoney"
+                android:layout_marginLeft="5dp"
+                android:text=""
+                android:textColor="@color/clr_gray_dark"
+                android:textSize="@dimen/ftsize_5"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:id="@+id/rlStat01"
+        android:visibility="visible"
+        android:layout_alignTop="@+id/rlJobInfo"
+        android:layout_alignBottom="@+id/rlJobInfo"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@color/clr_red_dark">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img01"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/magnifier_white"/>
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbl01"
+                android:layout_below="@+id/img01"
+                android:layout_marginTop="5dp"
+                android:text="우수 근로자를"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/ftsize_6"/>
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbl02"
+                android:layout_below="@+id/lbl01"
+                android:layout_centerHorizontal="true"
+                android:text="찾는 중입니다."
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/ftsize_6"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:id="@+id/rlStat02"
+        android:visibility="invisible"
+        android:layout_alignTop="@+id/rlJobInfo"
+        android:layout_alignBottom="@+id/rlJobInfo"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@color/clr_blue_light">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img03"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/users"/>
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbl03"
+                android:layout_below="@+id/img03"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="지원자"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/ftsize_6"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        android:id="@+id/rlStat03"
+        android:layout_alignTop="@+id/rlJobInfo"
+        android:layout_alignBottom="@+id/rlJobInfo"
+        android:layout_alignParentRight="true"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:background="@color/clr_blue_light">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/img05"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/users"/>
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbl05"
+                android:layout_below="@+id/img05"
+                android:layout_marginTop="5dp"
+                android:text="지원자"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/ftsize_6"/>
+
+            <TextView
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbl06"
+                android:layout_below="@+id/lbl05"
+                android:layout_centerHorizontal="true"
+                android:text="취소자"
+                android:gravity="center"
+                android:textColor="@color/clr_yellow_dark"
+                android:textSize="@dimen/ftsize_6"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

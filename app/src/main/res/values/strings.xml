@@ -1,0 +1,372 @@
+<resources>
+    <string name="app_name">김소장</string>
+    <string name="action_settings">Settings</string>
+
+	<string name="back_again">프로그램을 종료하시려면 다시 누르세요.</string>
+    <string name="first_title_en">건설일자리\n실시간 매칭 플랫폼</string>
+	<string name="first_subtitle_en">누적 연결수</string>
+	<string name="first_count_en">건</string>
+	<string name="first_countnumber_en">0,000</string>
+	<string name="first_downtitle_en">회원가입</string>
+	<string name="first_downcontent_en">이미,가입한 회원입니다. </string>
+	<string name="login_title_en">Login</string>
+	<string name="login_phonenumber_placeholder_en">휴대폰번호</string>
+	<string name="login_verifynumber_placeholder_en">인증번호</string>
+	<string name="login_verifynumber_request_en">인증번호받기</string>
+	<string name="login_verify_en">인증</string>
+	<string name="invalid_authcode">인증번호가 일치하지 않습니다.</string>
+	<string name="success_send_authreq">인증번호를 발송하였습니다.</string>
+    <string name="success_auth">인증이 완료되었습니다.</string>
+	<string name="fail_send_authreq">인증번호요청에 실패하였습니다.</string>
+	<string name="login_login_and_register_en">로그인 <![CDATA["&"]]> 회원가입</string>
+	<!--<string name="login_suppport_message_en">휴대폰번호를 입력하신 경우\n아래 고객센터로 연락 주시기 바랍니다.</string>-->
+	<string name="login_suppport_message_en">휴대폰번호가 변경된 경우 고객센터로 연락주세요.</string>
+	<string name="login_suppport_number_en">T. 070&#8211;1234&#8211;1237</string>
+	<string name="licenseagree_menubar_title_en">회원가입</string>
+	<string name="licenseagree_title_en">김소장 앱 사용을 위해 약관에 동의해주세요.</string>
+	<string name="please_agree_license">모두 동의를 해주세요.</string>
+	<string name="licenseagree_allagree_en">모두 동의</string>
+	<string name="licenseagree_agreeuse_en">이용약관 동의</string>
+	<string name="usedetail_title">이용약관</string>
+	<string name="infodetail_title">개인정보취급방침</string>
+	<string name="licenseagree_agreeinfo_en">개인정보취급방침 동의</string>
+	<string name="licenseagree_detail_en">자세히 보기</string>
+	<string name="licenseagree_agreeandcontinue_en">동의하고 진행합니다</string>
+	<string name="detailsignupinfo_title_en">회원가입을 위한 개인정보를 입력해주세요.</string>
+	<string name="detailsignupinfo_name_en">이름</string>
+	<string name="detailsignupinfo_name_placeholder_en">이름을 입력해주세요.</string>
+	<string name="detailsignupinfo_birthday_en">생년월일</string>
+	<string name="detailsignupinfo_phone_en">전화번호</string>
+	<string name="detailsignupinfo_birthday_placeholder_en">생년월일을 입력해주세요.</string>
+	<string name="detailsignupinfo_phone_placeholder_en">전화번호를 입력해주세요.</string>
+	<string name="detailsignupinfo_email_en">이메일</string>
+
+    <string name="incorrect_email">올바른 이메일형식이 아닙니다.</string>
+    <string name="same_email_exist">이미 사용중인 이메일 입니다.</string>
+    <string name="no_rec_mphone">추천인 휴대폰번호가 없는 번호입니다.</string>
+
+	<string name="detailsignupinfo_album_camera">사진찍기</string>
+	<string name="detailsignupinfo_album_library">사진앨범에서 선택</string>
+	<string name="detailsignupinfo_album_cancel">취소</string>
+
+    <string name="select_account">은행선택</string>
+	<string name="detailsignupinfo_email_placeholder_en">정확한 양식으로 입력해주세요.</string>
+	<string name="detailsignupinfo_elector_en">추천인</string>
+	<string name="input_email">이메일주소를 입력해주세요.</string>
+	<string name="detailsignupinfo_elector_placeholder_en">휴대폰번호를 입력해주세요.</string>
+	<string name="exist_phone">이미 등록된 번호입니다.</string>
+	<string name="detailsignupinfo_elector_placeholder_en1">추천인 휴대폰번호를 입력해주세요.</string>
+	<string name="mphone_must_11_chars">휴대폰번호는 11자리여야 합니다.</string>
+    <string name="input_authcode">인증번호를 입력해주세요.</string>
+    <string name="auth_phone">휴대폰번호를 인증해주세요.</string>
+	<string name="detailsignupinfo_gender_en">성별</string>
+	<string name="detailsignupinfo_man_en">남</string>
+	<string name="detailsignupinfo_woman_en">여</string>
+	<string name="detailsignupinfo_necessity_en">는 필수항목입니다.</string>
+	<string name="detailsignupinfo_login_en">가입하기</string>
+	<string name="signupfinish_title_en">가입목적에 맞는 환경설정을 해주세요.</string>
+	<string name="signupfinish_name_en">홍길동 님!</string>
+	<string name="welcome_template">%s 님!</string>
+	<string name="signupfinish_welcomemessage_en">가입해주셔서 감사합니다.</string>
+	<string name="signupfinish_question_en">일자리 알림을 받고 싶은 근로자 입니까 ?</string>
+	<string name="signupfinish_notation1_en">선호지역, 직종, 신분증 정보를 입력해주시면</string>
+	<string name="signupfinish_notation2_en">정확한 일자리 알림을 받을수 있습니다.</string>
+	<string name="signupfinish_button1_en">개인정보 설정하러 가기</string>
+	<string name="signupfinish_button2_en">나중에 할래요.</string>
+	<string name="signupfinish_button3_en">아니요, 현장관리자입니다.</string>
+	<string name="jobnotification_title">일알림</string>
+	<string name="jobnotification_path">가는 길 상세정보 더보기</string>
+	<string name="jobnotification_city1">도</string>
+	<string name="jobnotification_city2">시</string>
+	<string name="jobnotification_city3">구</string>
+	<string name="jobnotification_city4">동</string>
+	<string name="jobnotification_presentationcancel">출근취소</string>
+	<string name="jobnotification_workingcancel">작업취소</string>	
+	<string name="jobnotification_presentationok">출근확정</string>
+	<string name="jobnotification_supportcancel">지원취소</string>
+	<string name="jobnotification_insupporting">근로지원중</string>
+	<string name="jobnotification_incollecting">모집중</string>
+	<string name="jobnotification_normalworker">보통인부</string>
+	<string name="jobnotification_workload">근로이력</string>
+	
+	<string name="tab_control_job">일알림</string>
+	<string name="jobnotification_alarm">일알림</string>
+	<string name="tab_control_calendar">공수계산</string>
+	<string name="jobnotification_workloadcounting">공수계산</string>
+	<string name="jobnotification_verify">설정</string>
+	<string name="jobnotification_popup_message1">취소 후 재 요청 하실 수 없습니다.</string>
+	<string name="jobnotification_popup_message2">출근을 정말 취소 하시겠습니까?</string>
+	<string name="cancel_signin">취소 후 재 요청 하실 수 없습니다.\n출근을 정말 취소 하시겠습니까?</string>
+	<string name="cancel_support">취소 후 재 요청 하실 수 없습니다.\n지원을 정말 취소 하시겠습니까?</string>
+	<string name="confirm_delete">정말 삭제 하시겠습니까?</string>
+	<string name="confirm_select_worker">선택된 %d명으로 근로자를 확정하고 출근요청을 보냅니다.</string>
+	<string name="confirm_select_additional_worker">추가선택한 %d명의 근로자에게 출근요청을 보냅니다.</string>
+	<string name="jobnotification_popup_yes">예</string>
+	<string name="confirm_signin_first">먼저 출근확인을 해주세요.</string>
+	<string name="confirm_set_elegancies_first">먼저 근로평가를 해주세요.</string>
+	<string name="jobnotification_popup_no">아니요</string>
+	<string name="jobnotificationdetail_workingday">근무일</string>
+	<string name="jobnotificationdetail_workingplace">근무 장소</string>
+	<string name="jobnotificationdetail_workingtime">근무 시간</string>
+	<string name="jobnotificationdetail_kind_count">직종/인원</string>
+	<string name="jobnotificationdetail_perday">일당</string>
+	<string name="jobnotificationdetail_workingdetail">상세작업</string>
+	<string name="jobnotificationdetail_loginguy">등록자</string>
+	<string name="jobnotificationdetail_currentboss">현장 소장</string>
+	<string name="jobnotificationdetail_buildingcompany">건설 회사</string>
+	<string name="jobnotificationdetail_wholecount">원청사</string>
+	<string name="jobnotificationdetail_supportworking">근로 지원하기</string>
+	<string name="jobnotificationdetail_agreechecking">현장관리자가 출근처리 시 내 개인정보를 건설회사에 전달하는 것에 동의합니다.</string>
+	<string name="jobnotificationdetail_roadandseedetail">현장정보 상세정보 더보기</string>
+	<string name="agree_privacy">개인정보 동의를 해주세요.</string>
+	<string name="confirm_signin_check">출근 여부를 확정하시겠습니까?</string>
+	<string name="confirm_set_elegancies">근로자 평가를 완료하시겠습니까?</string>
+	<string name="confirm_set_workamounts">작업확인을 완료하시겠습니까?</string>
+	<string name="jobnotificationdetail_roadandseedetailarrow">></string>
+	<string name="jobnotificationdetail_count">보통인부 /3명</string>
+	<string name="jobnotificationdetail_yen">90,000원</string>
+	<string name="jobnotificationdetail_realbudget">실수령액 : 82,000</string>
+	<string name="jobnotificationdetail_cleaning">청소</string>
+	<string name="jobnotificationdetail_delivering">물건나르기</string>
+	<string name="tab_control_history">근로이력</string>
+	<string name="jobhistory_title">근로이력</string>
+	<string name="no_workhistory">이력이 없습니다. 근로지원을 신청해주세요.</string>
+	<string name="jobhistory_notverify">작업확인이 안되어 있습니다.</string>
+	<string name="jobhistory_payplan">원 지급예정</string>
+	<string name="jobhistory_payfinish">원 지급완료</string>
+	<string name="jobhistory_amount">90,000원</string>
+	<string name="jobhistory_yearmonth">2016. 09월</string>
+	<string name="jobhistory_yearmonthday">2016.09.27(화)</string>
+	<string name="jobhistory_name">I-Park</string>
+	<string name="jobhistory_whole">총</string>
+	<string name="jobhistorydetail_title">광교 I-Park</string>
+	
+	<string name="tab_control_setting">설정</string>
+	<string name="jobhistorydetail_presentcomplete">출근완료</string>
+	<string name="jobhistorydetail_moreshow">현장정보 상세정보 더보기</string>
+	<string name="jobhistorydetail_log">이력</string>
+	<string name="jobhistorydetail_proofdoc">증빙서류</string>
+	<string name="jobhistorydetail_checkingjobverify_message">앗! 현장에서 작업확인이 안되어 있어요. 작업이 완료되었다면 작업확인요청을 해보세요.</string>
+	<string name="jobhistorydetail_reqestingverify">작업확인 요청하기</string>
+	<string name="electroniccontract_title">전자근로계약서</string>
+	
+	<string name="setting_title">설정</string>
+	<string name="setting_username">9,999P</string>
+	<string name="setting_userjob">최정호님은 근로자입니다</string>
+	<string name="setting_pointin">포인트 내역</string>
+    <string name="setting_managerchange">관리자 변경</string>
+    <string name="setting_jobnotificationalert">일자리 알림받기</string>
+    <string name="setting_settingindividualinfo">개인정보설정 ></string>
+    <string name="setting_fundamentalinfo">기본정보</string>
+    <string name="setting_fundamentalsecurity">기초안전</string>
+    <string name="setting_certificate">신분증</string>
+    <string name="setting_accountinfo">계좌정보</string>
+    
+    <string name="pointlog_title">포인트 이력</string>
+    <string name="pointlog_wholeamount">보유포인트</string>
+    <string name="pointlog_wholeamountvalue">99,999P</string>
+    
+    <string name="connectworkshop_title">현장 연결</string>
+    <string name="connectworkshop_welcometext">김소장 앱을 사용해주셔서 감사합니다.</string>
+    <string name="connectworkshop_notation1" formatted="false">%s님은 \'%s\'현장관리자로\n등록되어 있네요.</string>
+    <string name="connectworkshop_notation2">현장을 연결하세요.</string>
+	<string name="connectworkshop_notation3">%s님은 현장관리자로 등록되어 있지 않습니다.</string>
+    <string name="connectworkshop_gotoconnect">현장 연결하러 가기</string>
+	<string name="connectworkshop_willlater">나중에 할래요</string>
+	
+	<string name="personalinfosetting_title">개인정보설정</string>
+	<string name="personalinfosetting_workcondition">근무조건</string>
+	<string name="personalinfosetting_workarea">희망근무지역 </string>
+	<string name="personalinfosetting_workday">희망근무요일 </string>
+	<string name="personalinfosetting_myinfosetting">내 정보 설정 </string>
+	<string name="personalinfosetting_job">직종</string>
+	<string name="personalinfosetting_history">경력 </string>
+	<string name="personalinfosetting_basicsecurity">기초안전교육이수여부</string>
+	<string name="personalinfosetting_basicsecurityinfo">기초안전교육이수정보</string>
+	<string name="personalinfosetting_certificate">신분증</string>
+	<string name="personalinfosetting_salaryinfo">임금지급정보  </string>
+	<string name="personalinfosetting_salarymethod">지급방법 </string>
+	<string name="personalinfosetting_accountinfo">계좌정보 </string>
+	<string name="personalinfosetting_personalintroducing">자기소개   </string>
+	<string name="personalinfosetting_introducingcomment">자신을 소개하는 내용을 입력해주세요.</string>
+	<string name="personalinfosetting_serviceinfo">서비스정보 </string>
+	<string name="personalinfosetting_accountjoininfo">회원가입정보  </string>
+	<string name="personalinfosetting_appversion">앱버전 </string> <!--added by Adonis-->
+	<string name="personalinfosetting_accountuseallow">회원약관 </string>
+	<string name="personalinfosetting_accountinfopolicy">개인정보취급방침 </string>
+	<string name="personalinfosetting_logout">회원탈퇴 </string>
+	<string name="personalinfosetting_wholecount">전국</string>
+	<string name="personalinfosetting_everyday">모든 요일</string>
+	<string name="personalinfosetting_normalworker">보통인부</string>
+	<string name="personalinfosetting_oneyear">%s년</string>
+	<string name="personalinfosetting_noexisting">없음</string>
+	<string name="personalinfosetting_rightarrow">></string>
+
+	<string name="selectworker_relatestatus_want">일하고 싶은 사람으로 등록된 근로자입니다.</string>
+	<string name="selectworker_relatestatus_cancel">개인사정으로 출근을 취소합니다.</string>
+
+	<string name="update_userinfo">회원정보를 업데이트 해주시기 바랍니다.</string>
+
+	<string name="wait_owner_agree">\'%s\' 현장에 근로지원을 했습니다.\n\n작업등록자가 승인을 해야 출근이 확정됩니다.\n\n잠시만 기다려주세요~</string>
+
+	<string name="desireworkarea_title">희망근무지역</string>
+	<string name="desireworkarea_wholecountry">전국</string>
+	<string name="desireworkarea_area">도</string>
+	
+	<string name="desireworkday_title">희망근무요일</string>
+	<string name="desireworkday_wholedays">전체</string>
+	<string name="desireworkday_day1">월요일</string>
+	<string name="desireworkday_day2">화요일</string>
+	<string name="desireworkday_day3">수요일</string>
+	<string name="desireworkday_day4">목요일</string>
+	<string name="desireworkday_day5">금요일</string>
+	<string name="desireworkday_day6">토요일</string>
+	<string name="desireworkday_day7">일요일</string>
+	
+	
+	<string name="history_comment">숫자(경력 연수)를 입력해 주세요.</string>
+	
+	<string name="basicsecurity_title">기초안전교육이수여부</string>
+	<string name="basicsecurity_day">이수날짜</string>
+	<string name="basicsecurity_dayvalue">2016.06.23</string>
+	<string name="basicsecurity_card">이수증</string>
+	<string name="basicsecurity_infobutton">기초안전교육이수정보 </string>
+	<string name="basicsecurity_delete">삭제</string>
+	
+	<string name="basiccecurity_comment">등록하실 이수증을\n해당 영역에 맞춰주세요.</string>
+	<string name="identitycard_comment">등록하실 신분증의 [앞면]을\n해당 영역에 맞춰주세요</string>
+	<string name="identitycard_comment_2">등록하실 신분증의 [뒷면]을\n해당 영역에 맞춰주세요</string>
+	<string name="cert_front">앞면</string>
+	<string name="cert_back">뒤면</string>
+	<string name="cert_frontback">앞면, 뒤면</string>
+	
+	<string name="paymentmethod_method">일 지급</string>
+	<string name="paymentmethod_method1">(수수료울 : 8%)</string>
+	<string name="paymentmethod_method2">주 지급(수수료울 : 6%, 매주 월요일 지급)</string>
+	<string name="paymentmethod_method3">월 지급(수수료울  : 4%, 매월 15일 지급)</string>
+	
+	<string name="accountinfo_bankselect">은행선택</string>
+	<string name="accountinfo_accountnumber">계좌번호</string>
+	<string name="accountinfo_accountmanager">계좌주</string>
+	<string name="accountinfo_accountnumberregister">계좌번호 등록</string>
+    <string name="input_bank_account">계좌번호를 입력해주세요.</string>
+	<string name="accountinfo_accountnumberhint">\'-\'없이 숫자만 입력해주세요.</string>
+	 
+	<string name="accountinfomodify_title">회원가입 수정</string>
+	<string name="accountinfomodify_changebutton">수정하기</string>
+	<string name="accountinfomodify_verifynumberaccept">인증번호 받기</string>
+	<string name="accountinfomodify_verify">인증하기</string>
+ 
+	<string name="accountinfomodify_phonenumber">휴대폰번호</string>
+	<string name="accountinfomodify_phonenumber__">휴대폰</string>
+	<string name="accountinfomodify_phonenumbertext">010-9596-8641</string>
+	<string name="accountinfomodify_verifynumber">인증번호</string>
+	
+	<string name="accountexit_title">회원탈퇴</string>
+	                       
+	
+	<string name="accountexit_question">탈퇴 하시겠습니까?</string>
+	<string name="accountexit_notation1">삭제된 계정의 모든 정보는 복구할수 없습니다.</string>
+	<string name="accountexit_notation2">신중하게 결정해 주세요.</string>
+	<string name="accountexit_commment">탈퇴 사유 선택</string>
+	<string name="accountexit_joinagain">재 가입하고 싶어요.</string>
+	<string name="accountexit_nohelp">내용이 도움이 되지 않아요.</string>
+	<string name="accountexit_error">앱 내 오류 발생</string>
+	<string name="accountexit_incorrect">부정확한 정보</string>
+	<string name="accountexit_nosatisfyforfeedback">피드백에 대한 불만</string>
+	<string name="accountexit_price">가격문제</string>
+
+	<string name="accountexit_insteadapp">대체 서비스 사용예정</string>
+	<string name="accountexit_uiinconvenient">UI가 사용상 불편함</string>
+	<string name="accountexit_other">기타</string>
+	<string name="accountexit_exit">탈퇴하기</string>
+	
+	                                                                           
+	<string name="job_job1">보통인부</string>                          
+	<string name="job_job2">형틀목공</string>
+	<string name="job_job3">내선전공</string>
+	<string name="job_job4">특별인부</string>
+	<string name="job_job5">건축목공</string>
+	<string name="job_job6">배관공</string>
+	<string name="job_job7">철근공</string>
+	<string name="job_job8">용접공</string>
+	<string name="job_job9">기계설비공</string>
+	<string name="job_job10">콘크리트공</string>
+	<string name="job_job11">미장공</string>
+	<string name="job_job12">통신설비공</string>
+	<string name="job_job13">비계공</string>
+	<string name="job_job14">견출공</string>
+	<string name="job_job15">석공</string>
+	<string name="job_job16">조력공</string>
+	<string name="job_job17">조적공</string>
+	<string name="job_job18">내장공</string>
+	<string name="job_job19">활석공</string>
+	<string name="job_job20">방수공</string>
+	<string name="job_job21">타일공</string>
+	<string name="job_job22">작업반장</string>
+	<string name="job_job23">도장공</string>
+	<string name="job_job24">철거공</string>
+
+	<string name="tab_setting_list_1_name">내가 어제 일했던 현장입니다.(총10일)</string>
+	<string name="tab_setting_list_2_name">정반장은 나를 일하고 싶은 사람으로 등록했습니다.</string>
+	<string name="tab_setting_list_3_name">강원승은 나를 일하고 싶은 사람으로 등록했습니다.</string>
+	<string name="tab_setting_list_1_content">(2015.9.20)</string>
+	<string name="historydetail_comment1">강원승님이 2016.8.20 7:20에 출근확인됐습니다.</string>
+
+	<string name="please_wait">잠시만 기다려주세요...</string>
+	<string name="notready">준비중입니다.</string>
+	
+	<string name="message_notready1">현재 오픈 준비 중 입니다.</string>
+	<string name="message_notready2">좋은 서비스로 찾아 뵙겠습니다.</string>
+
+	<string name="register">등록</string>
+    <string name="manage_spot">현장관리</string>
+    <string name="check_work">작업확인</string>
+    <string name="favorite">즐겨찾기</string>
+    <string name="create_new_job">작업등록</string>
+    <string name="workday">작업일</string>
+    <string name="signin_time">출근시간</string>
+    <string name="work_time">근무시간</string>
+    <string name="allday">종일</string>
+    <string name="halfday">반일</string>
+
+	<string name="is_worker">%s님은 근로자입니다</string>
+    <string name="is_manager">%s님은 현장관리자입니다</string>
+	<string name="input_spotname">현장명을 입력해주세요.</string>
+	<string name="input_address">주소를 입력해주세요.</string>
+	<string name="input_manager">담당자를 입력해주세요.</string>
+	<string name="input_companyname">회사명을 입력해주세요.</string>
+
+	<string name="add_manager">관리자 추가</string>
+	<string name="recommend_kboss">가입 요청</string>
+	<string name="favorite_worker">같이일하고싶은 근로자</string>
+	<string name="my_contacts">내 연락처</string>
+	<string name="recommended">앱 가입을 요청하였습니다.</string>
+	<string name="point_value_templ">+%dP</string>
+
+	<string name="can_select_after_today">오늘 이후 날짜만 선택이 가능합니다.</string>
+	<string name="input_workercount">인원을 입력해주세요.</string>
+	<string name="input_payment">일당지불액을 입력해주세요.</string>
+	<string name="worker_count_templ">%d명</string>
+
+	<string name="signin_check_requested">출근확인이 요청 되었습니다.</string>
+	<string name="successfully_cancelled">정상적으로 취소 되었습니다.</string>
+
+    <string name="support_count">지원자: %d명</string>
+	<string name="worker_count">근로자: %d명</string>
+    <string name="cancel_count">취소자: %d명</string>
+
+    <string name="select_workers">함께 일하고 싶은 근로자를 선택해주세요.</string>
+	<string name="select_additional_workers">추가할 근로자를 선택해주세요.</string>
+	<string name="selected_worker" formatted="false">확정된 근로자: %d명 / 총%d명</string>
+	<string name="cannot_select_worker">%d명이상 선택할수 없습니다.</string>
+	<string name="age_templ">만 %d세</string>
+
+	<!--<string name="changepaytype_notpaiddays">"%d일 일한 일당이 %s \n수수료율로 계산하여 지급됩니다.\n\n정말 변경하시겠습니까?"</string>-->
+
+	<!--<string name="work_as_owner">현장관리자로 등록하시겠습니까? 전환을 위해 재 로그인을 해주세요.</string>-->
+	<!--<string name="confirm_to_worker">회원등급을 근로자로 변경하시겠습니까? 전환을 위해 재 로그인을 해주세요.</string>-->
+	<string name="work_as_owner">현장관리자로 등록하시겠습니까?</string>
+	<string name="confirm_to_worker">회원등급을 근로자로 변경하시겠습니까?</string>
+
+</resources>

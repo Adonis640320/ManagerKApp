@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:id="@+id/rlHeader">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/backarrow"
+            android:onClick="returnBack"/>
+
+        <TextView
+            android:id="@+id/detailsignupinfo_menubartitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="현장가입"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnConfirm"
+            android:layout_alignParentRight="true"
+            android:background="@color/clr_blue_light"
+            android:text="확인"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_4"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_margin="2dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/lblSep"
+        android:background="@color/clr_gray_dark"
+        android:layout_below="@+id/rlHeader"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/lblSep">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/detail_signup_info_container"
+            android:weightSum="4">
+            <TextView
+                android:id="@+id/lbl01"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+
+                android:text="현장명"
+                android:textColor="#000000"
+                android:textSize="@dimen/ftsize_1"
+                android:layout_marginLeft="10dp">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edt01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:singleLine="true"
+                android:hint="@string/input_spotname"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:textSize="@dimen/ftsize_1">
+                <requestFocus />
+            </EditText>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/detail_signup_info_container"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/lbl02"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+
+                android:text="주소"
+                android:textColor="#000000"
+                android:textSize="@dimen/ftsize_1"
+                android:layout_marginLeft="10dp">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edt02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:singleLine="true"
+                android:hint="@string/input_address"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:textSize="@dimen/ftsize_1">
+            </EditText>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/detail_signup_info_container"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/lbl03"
+                android:layout_width="80dip"
+                android:layout_height="wrap_content"
+
+                android:text="담당자"
+                android:textColor="#000000"
+                android:textSize="@dimen/ftsize_1"
+                android:layout_marginLeft="10dp">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/edt03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:singleLine="true"
+                android:hint="@string/input_manager"
+                android:textColor="#000000"
+                android:background="@android:color/transparent"
+                android:textSize="@dimen/ftsize_1"
+                android:maxLength="11">
+            </EditText>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/detail_signup_info_container"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/lbl04"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="담당자"
+                android:textColor="#000000"
+                android:textSize="@dimen/ftsize_1"
+                android:layout_marginLeft="10dp"/>
+            <TextView
+                android:id="@+id/lbl05"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl04"
+                android:text="연락처"
+                android:textColor="#000000"
+                android:textSize="@dimen/ftsize_1"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:id="@+id/edt04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/lbl04"
+                android:singleLine="true"
+                android:hint="숫자만 입력해주세요."
+                android:layout_centerVertical="true"
+                android:textColor="#000000"
+                android:layout_marginLeft="0dp"
+                android:background="@android:color/transparent"
+                android:textSize="@dimen/ftsize_1"
+                android:inputType="number"
+                android:maxLength="11">
+            </EditText>
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView2"
+        android:src="@drawable/splash"
+        android:scaleType="centerCrop" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            >
+            <TextView
+            android:id="@+id/first_title"
+            style="@style/firstscreen_textview"
+                android:textStyle="bold"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="50dp" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical|center_horizontal"
+            >
+
+            <TextView
+                android:id="@+id/first_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+
+                android:text="@string/first_subtitle_en"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/ftsize_2"
+                android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dip" >
+
+            <TextView
+                android:id="@+id/first_countnumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/first_countnumber_en"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#ffd957"
+                android:textSize="@dimen/ftsize_2"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/first_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="20dip"
+                android:text="@string/first_count_en"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/ftsize_2"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            >
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginLeft="50dip"
+            android:layout_marginRight="50dip"
+            android:alpha="0.8"
+            android:background="@drawable/roundedcorner"
+            android:clickable="true"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/first_gotologin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="gotoRegisterStartActivity"
+                android:paddingTop="10dip"
+                android:paddingBottom="10dip"
+                android:text="@string/first_downtitle_en"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/clr_blue_dark"
+                android:textSize="@dimen/ftsize_3"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                >
+
+                <TextView
+                    android:id="@+id/first_whiteband"
+                    android:layout_width="wrap_content"
+                    android:layout_height="3px"
+                    android:background="@android:color/white"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/first_gotoregister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dip"
+                android:paddingBottom="10dip"
+                android:textColor="#000000"
+                android:text="@string/first_downcontent_en"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textSize="@dimen/ftsize_3"
+                android:onClick="gotoLoginActivity"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.todddavies.components.progressbar.ProgressWheel
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/pwLoading"
+        android:visibility="invisible"
+        android:layout_centerInParent="true" />
+
+
+</RelativeLayout>

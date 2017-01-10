@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/clr_gray_light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:id="@+id/rlHeader">
+
+        <ImageView
+            android:id="@+id/licenseagree_backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/backarrow"
+            android:onClick="returnBack"
+            />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/lblSep"
+        android:background="@color/clr_gray_dark"
+        android:layout_below="@+id/rlHeader"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lblSep"
+        android:layout_above="@+id/licenseagree_agreeandcontinuebutton"
+        android:background="@android:color/white"
+        android:layout_margin="7dp">
+
+        <TextView
+            android:id="@+id/licenseagree_title"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/clr_yellow_01"
+            android:text="@string/licenseagree_title_en"
+            android:textSize="@dimen/ftsize_4"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:id="@+id/rlAgreeAll"
+            android:layout_below="@+id/licenseagree_title"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="23dp" >
+
+            <CheckBox
+                android:id="@+id/licenseagree_allagree_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/licenseagree_allagree_en"
+                android:textColor="@color/clr_red_dark"
+                android:textSize="@dimen/ftsize_3"
+                android:layout_centerVertical="true"
+                android:paddingLeft="10dp"
+                android:button="@drawable/checkbox"
+                android:onClick="onAllAgreeClicked"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:id="@+id/lblSep2"
+            android:background="@color/clr_gray_light"
+            android:layout_below="@+id/rlAgreeAll"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:id="@+id/rlAgreeLicense"
+            android:layout_below="@+id/lblSep2"
+            android:layout_marginLeft="23dp"
+            >
+
+            <CheckBox
+                android:id="@+id/licenseagree_useagree"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/licenseagree_agreeuse_en"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/ftsize_3"
+                android:paddingLeft="10dp"
+                android:layout_centerVertical="true"
+                android:button="@drawable/gray_checkbox"
+                android:onClick="onUseAgreeClicked"/>
+
+
+            <TextView
+                android:id="@+id/licenseagree_detail"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:background="@android:color/white"
+                android:text="@string/licenseagree_detail_en"
+                android:textColor="@color/clr_red_dark"
+                android:textSize="@dimen/ftsize_3"
+                android:gravity="center"
+                android:clickable="true"
+                android:onClick="gotoLicenseActivity"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:id="@+id/lblSep3"
+            android:background="@color/clr_gray_light"
+            android:layout_below="@+id/rlAgreeLicense"/>
+
+        <RelativeLayout
+            android:id="@+id/rlPersonalAgree"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_below="@+id/lblSep3"
+            android:layout_marginLeft="23dp">
+
+            <CheckBox
+                android:id="@+id/licenseagree_infoagree"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/licenseagree_agreeinfo_en"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/ftsize_3"
+                android:paddingLeft="10dp"
+                android:layout_centerVertical="true"
+                android:button="@drawable/gray_checkbox"
+                android:onClick="onPrivacyAgreeClicked"/>
+
+
+            <TextView
+                android:id="@+id/licenseagree_detail2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="@string/licenseagree_detail_en"
+                android:textColor="@color/clr_red_dark"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/white"
+                android:layout_marginRight="20dp"
+                android:textSize="@dimen/ftsize_3"
+                android:gravity="center"
+                android:onClick="gotoPrivacyActivity" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:id="@+id/lblSep4"
+            android:background="@color/clr_gray_light"
+            android:layout_below="@+id/rlPersonalAgree"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/licenseagree_agreeandcontinuebutton"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/ftsize_3"
+        android:textColor="@android:color/white"
+        android:text="@string/licenseagree_agreeandcontinue_en"
+        android:background="@color/clr_red_dark"
+        android:onClick="gotoRegisterInputActivity"/>
+
+</RelativeLayout>

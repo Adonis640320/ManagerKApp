@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="10dp" android:background="@color/clr_gray_light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/rlSelectWorkAmount"
+        android:background="@android:color/white"
+        android:id="@+id/rlWorkerInfo">
+
+        <com.sincere.kboss.utils.CircularImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imgPhoto"
+            android:src="@drawable/photo"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl01"
+            android:layout_toRightOf="@+id/imgPhoto">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblName"
+                android:text="홍길동"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/ftsize_3"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblSkill"
+                android:layout_toRightOf="@+id/lblName"
+                android:text="보통인부"
+                android:textColor="@color/clr_blue_light"
+                android:textSize="@dimen/ftsize_5"
+                android:layout_alignBottom="@+id/lblName"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblSep"
+                android:layout_toRightOf="@+id/lblSkill"
+                android:text="|"
+                android:textColor="@color/clr_blue_light"
+                android:textSize="@dimen/ftsize_5"
+                android:layout_alignBottom="@+id/lblName"
+                android:layout_marginLeft="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblAge"
+                android:layout_toRightOf="@+id/lblSep"
+                android:text="만 51세"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/ftsize_5"
+                android:layout_alignBottom="@+id/lblName"
+                android:layout_marginLeft="5dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblAgeHistory"
+            android:layout_toRightOf="@+id/imgPhoto"
+            android:layout_below="@+id/rl01"
+            android:text="010-1234-1234"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlSelectWorkAmount"
+        android:layout_alignTop="@+id/rlWorkerInfo"
+        android:layout_alignBottom="@+id/rlWorkerInfo"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/white"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblWorkAmount"
+            android:text="선택"
+            android:textColor="@color/clr_red_dark"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/ftsize_1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/lblWorkAmount"
+            android:text=">"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/clr_gray"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/ftsize_1"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

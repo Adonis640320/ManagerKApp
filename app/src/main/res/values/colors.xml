@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="clr_blue_dark">#104072</color>
+    <color name="clr_blue_light">#3993ef</color>
+    <color name="clr_red_dark">#dc4040</color>
+    <color name="clr_yellow_dark">#ff9000</color>
+    <color name="clr_yellow_01">#ffb21c</color>
+    <color name="clr_yellow_02">#ffb321</color>
+    <color name="clr_gray_dark">#505050</color>
+    <color name="clr_gray">#999999</color>
+    <color name="clr_gray_02">#96a6b7</color>
+    <color name="clr_gray_light">#e9e9e9</color>
+    <color name="clr_separator">#cfcfcf</color>
+    <color name="clr_cyan">#0bcdd9</color>
+    <color name="clr_btn_history_on">#ff9000</color>
+    <color name="clr_btn_history_off">#96a6b7</color>
+
+    <color name="background_tab_pressed">#e9e9e9</color>
+</resources>

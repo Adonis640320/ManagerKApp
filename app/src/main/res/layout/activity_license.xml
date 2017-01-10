@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:id="@+id/rlHeader">
+
+        <ImageView
+            android:id="@+id/licenseagree_backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/backarrow"
+            android:onClick="returnBack"
+            />
+
+        <TextView
+            android:id="@+id/usedetail_menubartitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/usedetail_title"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnConfirm"
+            android:layout_alignParentRight="true"
+            android:background="@color/clr_blue_light"
+            android:text="확인"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_4"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_margin="2dp"
+            android:onClick="onConfirmPressed"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/lblSep"
+        android:background="@color/clr_gray_dark"
+        android:layout_below="@+id/rlHeader"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lblSep"
+        android:background="@android:color/white"
+        android:layout_margin="7dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/webView"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_1"
+            android:layout_gravity="center_horizontal" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="10dp" android:background="@color/clr_gray_light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingRight="15dp"
+        android:layout_centerVertical="true"
+        android:background="@android:color/white"
+        android:id="@+id/rlWorkerInfo">
+
+        <com.sincere.kboss.utils.CircularImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imgPhoto"
+            android:src="@drawable/photo"
+            android:background="@android:color/transparent"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgPhoto"
+            android:layout_toLeftOf="@+id/rlRemove"
+            android:id="@+id/rlCenter">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl01">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblName"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/ftsize_3"
+                    android:layout_marginLeft="15dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblRegDate"
+                    android:layout_toRightOf="@+id/lblName"
+                    android:text=""
+                    android:textColor="@color/clr_blue_light"
+                    android:textSize="@dimen/ftsize_5"
+                    android:layout_alignBottom="@+id/lblName"
+                    android:layout_marginLeft="5dp"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblSpotName"
+
+                android:layout_below="@+id/rl01"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/ftsize_1"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlRemove"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:background="@android:color/white">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/minus_round_red"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

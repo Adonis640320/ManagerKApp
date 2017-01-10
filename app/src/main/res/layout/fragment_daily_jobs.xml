@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <com.sincere.kboss.utils.PullToRefreshListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lstItems"
+        android:background="@color/clr_gray_light" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lblNoJobs"
+        android:text="등록된 작업이 없습니다."
+        android:textColor="@android:color/black"
+        android:visibility="invisible"
+        android:gravity="center"
+        android:textSize="@dimen/ftsize_7" />
+</RelativeLayout>

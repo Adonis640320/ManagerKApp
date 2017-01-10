@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:id="@+id/rlHeader">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/backarrow"
+            android:onClick="returnBack"/>
+
+        <TextView
+            android:id="@+id/detailsignupinfo_menubartitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="작업수정"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnConfirm"
+            android:layout_alignParentRight="true"
+            android:background="@color/clr_blue_light"
+            android:text="확인"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_4"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_margin="2dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/lblSep"
+        android:background="@color/clr_gray_dark"
+        android:layout_below="@+id/rlHeader"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lblSep"
+        android:layout_above="@+id/btnSave"
+        android:background="@color/clr_gray_light">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/clr_gray_light"
+            android:padding="7dp"
+            android:id="@+id/rlContents">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rlInfo"
+                android:background="@android:color/white"
+                android:padding="15dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/detail_signup_info_container"
+                    android:id="@+id/rl01">
+
+                    <TextView
+                        android:id="@+id/lbl01"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:text="@string/workday"
+                        android:textSize="@dimen/ftsize_1"
+                        android:gravity="left"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/lblWorkday"
+                        android:layout_toRightOf="@+id/lbl01"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/clr_red_dark"
+                        android:text="@string/jobhistory_yearmonthday"
+                        android:textSize="@dimen/ftsize_4"
+                        android:gravity="left"
+                        android:layout_marginLeft="15dp"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl02"
+                    android:layout_below="@+id/rl01"
+                    android:background="@drawable/detail_signup_info_container"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/lbl02"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:text="@string/signin_time"
+                        android:textSize="@dimen/ftsize_1"
+                        android:gravity="left"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/lblSigninTime"
+                        android:layout_toRightOf="@+id/lbl02"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:text="07:00"
+                        android:textSize="@dimen/ftsize_4"
+                        android:gravity="left"
+                        android:layout_marginLeft="15dp"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl03"
+                    android:layout_below="@+id/rl02"
+                    android:background="@drawable/detail_signup_info_container"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/lbl03"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:text="@string/work_time"
+                        android:textSize="@dimen/ftsize_1"
+                        android:gravity="left"
+                        android:layout_marginLeft="10dp"/>
+
+                    <ToggleButton
+                        android:id="@+id/tglWorktime"
+                        android:layout_width="65dp"
+                        android:layout_height="27dp"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:textOn=""
+                        android:textOff=""
+                        android:checked="true"
+                        android:background="@drawable/switch_allday"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl04"
+                    android:layout_below="@+id/rl03"
+                    android:background="@drawable/detail_signup_info_container"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/lbl04"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:text="@string/personalinfosetting_job"
+                        android:textSize="@dimen/ftsize_1"
+                        android:gravity="left"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/lblSkill"
+                        android:layout_toLeftOf="@+id/lblNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/clr_blue_light"
+                        android:text="@string/personalinfosetting_normalworker"
+                        android:textSize="@dimen/ftsize_4"
+                        android:layout_marginRight="15dp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lblNext"
+                        android:text=">"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/clr_gray"
+                        android:textSize="@dimen/ftsize_1"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl05"
+                    android:layout_below="@+id/rl04"
+                    android:background="@drawable/detail_signup_info_container"
+                    android:layout_marginTop="5dp"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/lbl05"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:text="상세작업"
+                        android:textSize="@dimen/ftsize_1"
+                        android:gravity="left"
+                        android:layout_marginLeft="10dp"/>
+
+                    <EditText
+                        android:id="@+id/edtJobDetail"
+                        android:layout_toRightOf="@+id/lbl05"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"
+                        android:textColor="@android:color/black"
+                        android:hint="청소,물건 나르기 등"
+                        android:maxLength="32"
+                        android:background="@android:color/transparent"
+                        android:textSize="@dimen/ftsize_4"
+                        android:gravity="left"
+                        android:layout_marginLeft="15dp"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl06"
+                    android:layout_below="@+id/rl05"
+                    android:background="@drawable/detail_signup_info_container"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/lbl06"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:text="인원"
+                        android:textSize="@dimen/ftsize_1"
+                        android:gravity="left"
+                        android:layout_marginLeft="10dp"/>
+
+                    <EditText
+                        android:id="@+id/edtWorkerCount"
+                        android:layout_toRightOf="@+id/lbl06"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:singleLine="true"
+                        android:maxLength="8"
+                        android:inputType="number"
+                        android:hint="인원을 입력해주세요."
+                        android:background="@android:color/transparent"
+                        android:textSize="@dimen/ftsize_4"
+                        android:gravity="left"
+                        android:layout_marginLeft="15dp"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl07"
+                    android:layout_below="@+id/rl06"
+                    android:background="@drawable/detail_signup_info_container"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/lbl07"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:text="일당"
+                        android:textSize="@dimen/ftsize_1"
+                        android:gravity="left"
+                        android:layout_marginLeft="10dp"/>
+
+                    <EditText
+                        android:id="@+id/edtPayment"
+                        android:layout_toRightOf="@+id/lbl07"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:singleLine="true"
+                        android:maxLength="10"
+                        android:text="100000"
+                        android:inputType="number"
+                        android:hint=""
+                        android:background="@android:color/transparent"
+                        android:textSize="@dimen/ftsize_4"
+                        android:gravity="left"
+                        android:layout_marginLeft="15dp"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rl08"
+                    android:layout_below="@+id/rl07"
+                    android:background="@drawable/detail_signup_info_container"
+                    android:layout_marginTop="5dp">
+
+                    <TextView
+                        android:id="@+id/lbl08"
+                        android:layout_width="75dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@android:color/black"
+                        android:text="자동매칭"
+                        android:textSize="@dimen/ftsize_1"
+                        android:gravity="left"
+                        android:layout_marginLeft="10dp"/>
+
+                    <CheckBox
+                        android:id="@+id/chkAutoMatch"
+                        android:layout_toRightOf="@+id/lbl08"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/clr_gray_dark"
+                        android:text="필요인원 지원시 자동출근확정"
+                        android:background="@android:color/transparent"
+                        android:textSize="@dimen/ftsize_4"
+                        android:gravity="center_vertical"
+                        android:layout_marginLeft="15dp"
+                        />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl08"
+                    android:layout_margin="15dp"
+                    android:padding="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/clr_gray_light">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:id="@+id/img01"
+                        android:src="@drawable/exclam"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/img01"
+                        android:layout_marginLeft="15dp"
+                        android:text="등록 후 지원자가 매칭되면 작업을 수정활수 없습니다.\n정보를 정확하게 확인해주세요."
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/ftsize_5"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDelete"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/ftsize_3"
+        android:text="작업취소"
+        android:textColor="@android:color/white"
+        android:background="@color/clr_blue_light" />
+
+</RelativeLayout>

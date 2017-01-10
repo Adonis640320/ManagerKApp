@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpContents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/lblSep2"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/flExtraFragment"
+        android:visibility="invisible"
+        android:layout_above="@+id/lblSep2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/lblSep2"
+        android:background="@color/clr_gray"
+        android:layout_above="@+id/llMenuBar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llMenuBar"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:weightSum="4"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:id="@+id/rlTab1"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:onClick="tabClicked"
+            android:clickable="true">
+            <!--android:background="@color/clr_red_dark"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_centerVertical="true">
+                <ImageView
+                    android:id="@+id/imgTab1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/alarmoff"/>
+                <TextView
+                    android:id="@+id/lblTab1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgTab1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/ftsize_6"
+                    android:textColor="@color/clr_gray"
+                    android:text="@string/jobnotification_alarm"/>
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="2dp"
+                android:id="@+id/imgBadge"
+                android:background="@android:color/transparent"
+                android:visibility="invisible"
+                android:src="@drawable/badge"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTab2"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:background="@android:color/white"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:onClick="tabClicked"
+            android:clickable="true">
+            <ImageView
+                android:id="@+id/imgTab2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/clockoff"/>
+            <TextView
+                android:id="@+id/lblTab2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgTab2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/ftsize_6"
+                android:textColor="@color/clr_gray"
+                android:text="@string/jobnotification_workload"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTab3"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:background="@android:color/white"
+            android:onClick="tabClicked"
+            android:clickable="true">
+            <ImageView
+                android:id="@+id/imgTab3"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/calendaroff"/>
+            <TextView
+                android:id="@+id/lblTab3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgTab3"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/ftsize_6"
+                android:textColor="@color/clr_gray"
+                android:text="@string/jobnotification_workloadcounting"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlTab4"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+
+            android:background="@android:color/white"
+            android:onClick="tabClicked"
+            android:clickable="true">
+
+            <!--android:layout_toRightOf="@+id/imgTab4"-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_centerVertical="true">
+            <ImageView
+                android:id="@+id/imgTab4"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/paperoff"/>
+            <TextView
+                android:id="@+id/lblTab4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imgTab4"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:textSize="@dimen/ftsize_6"
+                android:textColor="@color/clr_gray"
+                android:text="@string/jobnotification_verify"/>
+            </RelativeLayout>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imgBadge4"
+                android:background="@android:color/transparent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="2dp"
+                android:visibility="invisible"
+                android:src="@drawable/badge"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.todddavies.components.progressbar.ProgressWheel
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/pwLoading"
+        android:visibility="invisible"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

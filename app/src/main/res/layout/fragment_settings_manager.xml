@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:id="@+id/rlHeader">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/backarrow"
+            android:visibility="invisible"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlTitle"
+            android:layout_centerInParent="true">
+            <TextView
+                android:id="@+id/lblTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="설정"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/ftsize_1" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/lblSep"
+        android:background="@color/clr_gray_dark"
+        android:layout_below="@+id/rlHeader"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+        android:layout_below="@+id/lblSep"
+		android:background="@color/clr_gray_light"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/clr_blue_light"
+			android:orientation="vertical">
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:weightSum="3"
+				android:gravity="center_vertical"
+				android:layout_marginTop="20dp"
+				>
+				<LinearLayout
+					android:layout_width="0dip"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:gravity="right|center_vertical">
+					<com.sincere.kboss.utils.CircularImageView
+						android:layout_width="70dp"
+						android:layout_height="70dp"
+						android:id="@+id/imgPhoto"
+						android:background="@drawable/photo"
+						/>
+
+
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dip"
+					android:layout_height="wrap_content"
+					android:layout_weight="2"
+					android:gravity="center_vertical"
+					android:orientation="vertical"
+					android:paddingLeft="20dp">
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+                        android:id="@+id/lblPointValue"
+						android:text=""
+						android:textColor="#ffd658"
+						android:textSize="@dimen/ftsize_2"
+						/>
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+                        android:id="@+id/lblName"
+						android:text=""
+						android:textColor="@android:color/white"
+						android:textSize="@dimen/ftsize_1"
+						/>
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:weightSum="2"
+				android:layout_marginTop="15dp"
+				android:layout_marginBottom="15dp"
+				android:gravity="center_vertical"
+				android:baselineAligned="false"
+				>
+				<LinearLayout
+					android:layout_width="0dip"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:paddingRight="10dp"
+					android:gravity="center_vertical|right">
+					<Button
+						android:id="@+id/btnPoints"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="@string/setting_pointin"
+						android:background="@drawable/setting_roundbutton_blue"
+						android:textColor="@android:color/white"
+						android:textSize="@dimen/ftsize_1"
+						android:gravity="center_horizontal|center_vertical"
+						android:minWidth="120dp"/>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dip"
+					android:layout_height="wrap_content"
+					android:layout_weight="1"
+					android:paddingRight="10dp"
+					android:gravity="center_vertical|left">
+					<Button
+						android:id="@+id/btnSpot"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="근로자 변경"
+						android:background="@drawable/setting_roundbutton_blue"
+						android:textColor="@android:color/white"
+						android:textSize="@dimen/ftsize_1"
+						android:gravity="center_horizontal|center_vertical"
+						android:minWidth="120dp"/>
+				</LinearLayout>
+
+			</LinearLayout>
+
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:weightSum="2"
+			android:gravity="center_vertical"
+			android:orientation="horizontal"
+			android:paddingBottom="10dp"
+			android:paddingLeft="20dp"
+			android:paddingRight="20dp"
+			android:paddingTop="10dp"
+			android:background="@android:color/white">
+			<LinearLayout
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="left|center_vertical"
+				>
+				<TextView
+					android:id="@+id/setting_jobalerttext"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_gravity="left"
+					android:text="알림받기"
+					android:textColor="#000000"
+					android:textSize="@dimen/ftsize_3" />
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="0dip"
+				android:layout_height="wrap_content"
+				android:layout_weight="1"
+				android:gravity="right|center_vertical"
+				>
+
+				<!-- <Switch
+                    android:id="@+id/setting_jobalertswitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:background="@android:color/white"
+                    android:thumb="@drawable/switch_thumb"
+                    android:track="@drawable/switch_track"
+
+                    android:textColorHint="@android:color/transparent" /> -->
+
+				<ToggleButton
+					android:id="@+id/tglJobNotify"
+					android:layout_width="65dp"
+					android:layout_height="27dp"
+					android:gravity="center_vertical|center_horizontal"
+					android:layout_marginRight="15dp"
+					android:textOn=""
+					android:textOff=""
+					android:background="@drawable/switch_blue"
+					/>
+			</LinearLayout>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/llUserInfo"
+			android:orientation="vertical"
+			android:background="@android:color/white"
+			android:paddingBottom="10dp"
+			android:paddingLeft="20dp"
+			android:paddingRight="20dp"
+			android:paddingTop="0dp"
+			android:layout_marginTop="2dp">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:weightSum="4"
+				android:layout_marginTop="10dp"
+				android:orientation="horizontal">
+				<LinearLayout
+					android:layout_width="0dip"
+					android:layout_height="wrap_content"
+                    android:id="@+id/llLinkSpot"
+					android:layout_weight="1"
+					android:orientation="vertical"
+					android:gravity="center_horizontal">
+
+					<ImageView
+						android:layout_width="55dp"
+						android:layout_height="55dp"
+						android:background="@drawable/setting_basicinfo_blue"
+						android:layout_marginBottom="5dp"
+						/>
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="현장연결"
+						android:textColor="#000000"
+						android:textSize="@dimen/ftsize_4"/>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dip"
+					android:layout_height="wrap_content"
+                    android:id="@+id/llReqRegister"
+					android:layout_weight="1"
+					android:orientation="vertical"
+					android:gravity="center_horizontal">
+
+					<ImageView
+						android:layout_width="55dp"
+						android:layout_height="55dp"
+						android:background="@drawable/setting_security_blue"
+						android:layout_marginBottom="5dp"
+						/>
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="현장/회사"
+						android:textColor="#000000"
+						android:textSize="@dimen/ftsize_4"/>
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="가입신청"
+						android:textColor="#000000"
+						android:textSize="@dimen/ftsize_4"/>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dip"
+					android:layout_height="wrap_content"
+                    android:id="@+id/llAddManager"
+					android:layout_weight="1"
+					android:orientation="vertical"
+					android:gravity="center_horizontal">
+
+					<ImageView
+						android:layout_width="55dp"
+						android:layout_height="55dp"
+						android:background="@drawable/setting_certificate_blue"
+						android:layout_marginBottom="5dp"
+						/>
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="현장관리자"
+						android:textColor="#000000"
+						android:textSize="@dimen/ftsize_4"/>
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="추가"
+						android:textColor="#000000"
+						android:textSize="@dimen/ftsize_4"/>
+				</LinearLayout>
+
+				<LinearLayout
+					android:layout_width="0dip"
+					android:layout_height="wrap_content"
+                    android:id="@+id/llInfo"
+					android:layout_weight="1"
+					android:orientation="vertical"
+					android:gravity="center_horizontal">
+
+					<ImageView
+						android:layout_width="55dp"
+						android:layout_height="55dp"
+						android:background="@drawable/setting_info_blue"
+						android:layout_marginBottom="5dp"
+						/>
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="가입정보"
+						android:textColor="#000000"
+						android:textSize="@dimen/ftsize_4"/>
+				</LinearLayout>
+			</LinearLayout>
+		</LinearLayout>
+
+		<com.sincere.kboss.utils.PullToRefreshListView
+			android:id="@+id/lstHistory"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:layout_marginTop="2dp"
+			android:background="@android:color/white"
+			android:padding="10dp" >
+
+		</com.sincere.kboss.utils.PullToRefreshListView>
+		<!--<ExpandableListView-->
+			<!--android:id="@+id/lstHistory"-->
+			<!--android:layout_width="match_parent"-->
+			<!--android:layout_height="match_parent"-->
+			<!--android:layout_marginTop="2dp"-->
+			<!--android:groupIndicator="@null"-->
+			<!--android:background="@android:color/white"-->
+			<!--android:padding="10dp"/>-->
+	</LinearLayout>
+
+
+</RelativeLayout>

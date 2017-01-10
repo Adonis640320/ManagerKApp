@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@android:color/white">
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/backarrow"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/detailsignupinfo_menubartitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/tab_control_calendar"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_1" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lblSep"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/rlHeader"
+        android:background="@color/clr_gray_dark" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:layout_width="135dp"
+            android:layout_height="57dp"
+            android:id="@+id/imgMark"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/mark_black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblMsg1"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/imgMark"
+            android:layout_marginTop="55dp"
+            android:text="@string/message_notready1"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblMsg2"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/lblMsg1"
+            android:layout_marginTop="10dp"
+            android:text="@string/message_notready2"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_3"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

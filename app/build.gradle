@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+
+    defaultConfig {
+        applicationId "com.sincere.kboss"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+        }
+    }
+}
+
+dependencies {
+    provided fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile project(':android-async-http')
+    compile project(':dialogplus')
+    compile project(':universalimageloader')
+    compile project(':AndroidBootstrap')
+    compile project(':android-betterpickers')
+    compile project(':pinned-section-listview')
+    compile 'com.google.firebase:firebase-messaging:9.0.0'
+    compile files('libs/libDaumMapAndroid.jar')
+    //    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+}
+
+apply plugin: 'com.google.gms.google-services'

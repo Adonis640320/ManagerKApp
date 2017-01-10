@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <RelativeLayout
+        android:id="@+id/rlContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="50dp"
+            android:background="#ffffff">
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="공지사항 제목 공지사항 제목 공지사항 제목"
+                android:textSize="@dimen/ftsize_1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"/>
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="5dp"
+                android:gravity="right"
+                android:text="2016.12.29 15:00"
+                android:textColor="@color/clr_gray"
+                android:textSize="@dimen/ftsize_5"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/clr_separator" />
+            <TextView
+                android:id="@+id/tvDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/ftsize_3"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:text="공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용 공지사항 내용공지사항 내용 공지사항 내용 공지사항 내용 "/>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/ivNoticeClose"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/notice_close"
+            android:layout_below="@+id/llContent"
+            android:layout_marginTop="-25dp"
+            android:layout_centerHorizontal="true"/>
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.sincere.kboss.SplashActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/imageView"
+        android:src="@drawable/splash"
+        android:scaleType="centerCrop" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlLinkCount"
+        android:visibility="invisible"
+        android:layout_centerInParent="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lbl01"
+            android:text="누적 연결수"
+            android:textColor="@android:color/white"
+            android:layout_centerHorizontal="true"
+            android:textSize="@dimen/ftsize_2"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lbl01"
+            android:layout_marginTop="5dp"
+            android:layout_centerHorizontal="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblLinkCount"
+                android:textSize="@dimen/ftsize_2"
+                android:textColor="@color/clr_yellow_02"
+                android:text="0,000"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbl02"
+                android:layout_toRightOf="@+id/lblLinkCount"
+                android:layout_marginLeft="5dp"
+                android:text="건"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/ftsize_2"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:id="@+id/rlHeader">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/backarrow"
+            android:onClick="returnBack"/>
+
+        <TextView
+            android:id="@+id/detailsignupinfo_menubartitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="근로자 선택"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnConfirm"
+            android:layout_alignParentRight="true"
+            android:background="@color/clr_blue_light"
+            android:text="확인"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_4"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_margin="2dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/lblSep"
+        android:background="@color/clr_gray_dark"
+        android:layout_below="@+id/rlHeader"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlHint"
+        android:layout_below="@+id/lblSep"
+        android:background="@color/clr_blue_dark"
+        android:layout_margin="5dp"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblSelectStat"
+            android:text="@string/select_workers"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_4"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <com.sincere.kboss.utils.PullToRefreshListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lstItems"
+        android:layout_below="@+id/rlHint"
+        android:layout_above="@+id/btnRefresh"
+        android:background="@color/clr_gray_light" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRefresh"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/ftsize_3"
+        android:text="근로자 재탐색"
+        android:visibility="visible"
+        android:textColor="@android:color/white"
+        android:background="@color/clr_blue_light" />
+</RelativeLayout>

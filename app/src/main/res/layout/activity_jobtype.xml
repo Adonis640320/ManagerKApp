@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/clr_gray_light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:id="@+id/rlHeader">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/backarrow"
+            />
+
+        <TextView
+            android:id="@+id/detailsignupinfo_menubartitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/personalinfosetting_job"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnConfirm"
+            android:layout_alignParentRight="true"
+            android:background="@color/clr_blue_light"
+            android:text="확인"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_4"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_margin="2dp"
+            android:onClick="onConfirmPressed"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/lblSep"
+        android:background="@color/clr_gray_dark"
+        android:layout_below="@+id/rlHeader"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lblSep"
+        android:background="@android:color/white">
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+
+        <!--android:background="@android:color/white"-->
+        <!--&gt;-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="3dp"
+            android:padding="20dp"
+            android:background="@android:color/white">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/clr_gray_light"
+                android:padding="1dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    style="@style/job_3wraplinearlayout"
+                    >
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle1"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job1"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job1"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle2"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job2"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job2"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle3"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job3"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job3"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/job_3wraplinearlayout"
+                    >
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle4"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job4"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job4"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle5"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job5"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job5"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle6"
+                        style="@style/job_jobwraplinearlayout"
+                        >
+                        <TextView
+                            android:id="@+id/job_job6"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job6"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/job_3wraplinearlayout"
+                    >
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle7"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job7"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job7"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle8"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job8"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job8"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle9"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job9"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job9"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/job_3wraplinearlayout"
+                    >
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle10"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job10"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job10"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle11"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job11"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job11"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle12"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job12"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job12"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/job_3wraplinearlayout"
+                    >
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle13"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job13"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job13"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle14"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job14"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job14"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle15"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job15"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job15"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/job_3wraplinearlayout"
+                    >
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle16"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job16"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job16"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle17"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job17"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job17"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle18"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job18"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job18"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/job_3wraplinearlayout"
+                    >
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle19"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job19"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job19"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle20"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job20"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job20"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle21"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job21"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job21"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    style="@style/job_3wraplinearlayout"
+                    >
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle22"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job22"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job22"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle23"
+                        style="@style/job_jobwraplinearlayout"
+                        >
+                        <TextView
+                            android:id="@+id/job_job23"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job23"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/job_jobtitle24"
+                        style="@style/job_jobwraplinearlayout">
+                        <TextView
+                            android:id="@+id/job_job24"
+                            style="@style/job_jobtext"
+                            android:text="@string/job_job24"
+                            android:textSize="@dimen/ftsize_3"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    <!--</ScrollView>-->
+    </RelativeLayout>
+    <com.todddavies.components.progressbar.ProgressWheel
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/pwLoading"
+        android:visibility="invisible"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

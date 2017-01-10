@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:id="@+id/rlHeader">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/backarrow"
+            android:onClick="returnBack"
+            />
+
+        <TextView
+            android:id="@+id/detailsignupinfo_menubartitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상세"
+            android:layout_centerInParent="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_1" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/lblSep"
+        android:background="@color/clr_gray_dark"
+        android:layout_below="@+id/rlHeader"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/lblSep"
+        android:layout_above="@+id/rlPostBack">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:weightSum="4">
+            <TextView
+                android:id="@+id/lblName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="용산"
+                android:textColor="#000000"
+                android:textSize="@dimen/ftsize_3">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/lblRegtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:singleLine="true"
+                android:text="2016.05.11 08:25:06"
+                android:textColor="@color/clr_gray"
+                android:textSize="@dimen/ftsize_1">
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/detail_signup_info_container"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/lbl02"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="주소"
+                android:textColor="#000000"
+                android:textSize="@dimen/ftsize_1">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/lblAddress"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="서울시 영등포구 영등포동 222"
+                android:textColor="@color/clr_gray"
+                android:textSize="@dimen/ftsize_1">
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/detail_signup_info_container"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/lbl03"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="담당자"
+                android:textColor="#000000"
+                android:textSize="@dimen/ftsize_1">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/lblManager"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="홍길동"
+                android:textColor="@color/clr_gray"
+                android:textSize="@dimen/ftsize_1"
+                android:maxLength="11">
+
+                <requestFocus />
+            </TextView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/detail_signup_info_container"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/lbl04"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="담당자"
+                android:textColor="#000000"
+                android:textSize="@dimen/ftsize_1"/>
+            <TextView
+                android:id="@+id/lbl05"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl04"
+                android:text="연락처"
+                android:textColor="#000000"
+                android:textSize="@dimen/ftsize_1"/>
+
+            <TextView
+                android:id="@+id/lblManagerPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/lbl04"
+                android:text="01012345678"
+                android:layout_centerVertical="true"
+                android:textColor="@color/clr_gray"
+                android:layout_marginLeft="28dp"
+                android:textSize="@dimen/ftsize_1">
+
+                <requestFocus />
+            </TextView>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlPostBack"
+        android:layout_alignParentBottom="true"
+        android:background="@color/clr_gray_light"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="관리자"
+            android:id="@+id/lbl10"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_3"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblFeedbackDate"
+            android:text="2016.09.08"
+            android:layout_toRightOf="@id/lbl10"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@+id/lbl10"
+            android:textColor="@color/clr_gray_dark"
+            android:textSize="@dimen/ftsize_3"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="하반기 실적 기대갑에 ..."
+            android:id="@+id/lblFeedback"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/ftsize_1"
+            android:layout_below="@+id/lbl10"
+            android:layout_marginTop="15dp"/>
+
+    </RelativeLayout>
+</RelativeLayout>

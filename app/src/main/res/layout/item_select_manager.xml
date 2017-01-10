@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:paddingBottom="5dp" android:background="@color/clr_gray_light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlContent"
+        android:background="@android:color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/lblSep01"
+            android:background="@android:color/white"
+            android:id="@+id/rlManagerInfo">
+
+            <com.sincere.kboss.utils.CircularImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imgPhoto"
+                android:background="@android:color/transparent"
+                android:src="@drawable/photo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblName"
+                android:layout_toRightOf="@+id/imgPhoto"
+                android:text="홍길동"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/ftsize_3"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblPhone"
+                android:layout_toRightOf="@+id/imgPhoto"
+                android:layout_below="@+id/lblName"
+                android:text="010-1234-5678"
+                android:textColor="@color/clr_blue_light"
+                android:textSize="@dimen/ftsize_3"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblSep01"
+            android:text=""
+            android:background="@color/clr_gray_light"
+            android:layout_toLeftOf="@+id/rlSwitch"
+            android:visibility="gone"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/rlSwitch"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/rlManagerInfo"
+            android:layout_alignBottom="@+id/rlManagerInfo"
+            android:layout_centerVertical="true"
+            android:background="@android:color/white">
+
+            <ToggleButton
+                android:id="@+id/tglSignin"
+                android:layout_width="65dp"
+                android:layout_height="27dp"
+                android:layout_marginRight="15dp"
+                android:layout_centerVertical="true"
+                android:textOn=""
+                android:textOff=""
+                android:checked="true"
+                android:background="@drawable/switch_link"
+                android:visibility="visible"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/lblSep02"
+        android:text=""
+        android:background="@color/clr_gray_light"
+        android:layout_below="@+id/rlContent"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/llHistory"
+        android:layout_below="@+id/lblSep02">
+
+    </LinearLayout>
+
+</RelativeLayout>

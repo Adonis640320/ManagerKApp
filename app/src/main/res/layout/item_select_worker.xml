@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="10dp" android:background="@color/clr_gray_light">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:padding="19dp"
+            android:layout_toLeftOf="@+id/lblSep01"
+            android:background="@android:color/white"
+            android:id="@+id/rlWorkerInfo">
+
+            <com.sincere.kboss.utils.CircularImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/imgPhoto"
+                android:background="@android:color/transparent"
+                android:src="@drawable/photo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblName"
+                android:layout_toRightOf="@+id/imgPhoto"
+                android:text="홍길동"
+                android:textColor="@color/clr_blue_light"
+                android:textSize="@dimen/ftsize_3"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblAgeHistory"
+                android:text="만 51세 | 경력 3년"
+                android:textColor="@color/clr_blue_light"
+                android:textSize="@dimen/ftsize_3"
+                android:layout_alignBottom="@+id/imgPhoto"
+                android:layout_alignLeft="@+id/lblName"
+                android:layout_alignStart="@+id/lblName" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="1px"
+            android:layout_height="90dp"
+            android:id="@+id/lblSep01"
+            android:text=""
+            android:background="@color/clr_gray_light"
+            android:layout_toLeftOf="@+id/rlElegancy"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:id="@+id/rlElegancy"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/white">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl01"
+                    android:layout_centerHorizontal="true"
+                    android:text="근무평가"
+                    android:textColor="@color/clr_red_dark"
+                    android:textStyle="bold"
+                    android:src="@drawable/magnifier_white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lblElegancy"
+                    android:layout_below="@+id/lbl01"
+                    android:layout_marginTop="5dp"
+                    android:text="100"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/clr_red_dark"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/ftsize_6"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblElegancy"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp">
+                    <ImageView
+                        android:id="@+id/ivStar1"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:padding="1dp"
+                        android:src="@drawable/star_selected"/>
+                    <ImageView
+                        android:id="@+id/ivStar2"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:padding="1dp"
+                        android:src="@drawable/star_selected"/>
+                    <ImageView
+                        android:id="@+id/ivStar3"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:padding="1dp"
+                        android:src="@drawable/star_selected"/>
+                    <ImageView
+                        android:id="@+id/ivStar4"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:padding="1dp"
+                        android:src="@drawable/star_selected"/>
+                    <ImageView
+                        android:id="@+id/ivStar5"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:padding="1dp"
+                        android:src="@drawable/star_selected"/>
+                </LinearLayout>
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/lbl02"-->
+                    <!--android:layout_below="@+id/lblElegancy"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:text="*****"-->
+                    <!--android:layout_marginTop="5dp"-->
+                    <!--android:textColor="@color/clr_red_dark"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:textSize="@dimen/ftsize_6"/>-->
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/lblSep02"
+        android:layout_marginLeft="3dp"
+        android:text=""
+        android:background="@color/clr_gray_light"
+        android:layout_below="@+id/rlWorkerInfo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/llHistory"
+        android:layout_below="@+id/lblSep02"
+        android:padding="9dp">
+        <LinearLayout
+            android:id="@+id/llRelate1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+
+            android:gravity="center_vertical"
+            android:visibility="visible">
+            <ImageView
+                android:id="@+id/ivRelate1"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/flag_blue" />
+            <TextView
+                android:id="@+id/tvRelate1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:textSize="@dimen/ftsize_5"
+                android:textColor="@color/clr_blue_dark"
+                android:text="2016.09.20에 함께 일했던 근로자입니다."/>
+        </LinearLayout>
+        <View
+            android:id="@+id/space"
+            android:layout_width="match_parent"
+            android:layout_height="9dp" />
+        <LinearLayout
+            android:id="@+id/llRelate2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="9dp"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+            <ImageView
+                android:id="@+id/ivRelate2"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/flag_blue" />
+            <TextView
+                android:id="@+id/tvRelate2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:textSize="@dimen/ftsize_5"
+                android:textColor="@color/clr_blue_dark"
+                android:text="일하고 싶은 사람으로 등록된 근로자입니다."/>
+        </LinearLayout>
+    </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/clr_gray_light"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:id="@+id/rlHeader">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/backarrow"
+            android:visibility="visible"
+            />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlTitle"
+            android:layout_centerInParent="true">
+            <TextView
+                android:id="@+id/lblTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="설정"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/ftsize_1" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/clr_gray_light"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:paddingTop="7dp"
+        android:layout_below="@+id/rlHeader"
+        android:layout_above="@+id/llActions">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="7dp"
+            android:background="@android:color/white">
+
+            <com.sincere.kboss.utils.CircularImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/imgPhoto"
+                android:layout_marginTop="23dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/photo"
+                android:background="@android:color/transparent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lbl01"
+                android:layout_below="@+id/imgPhoto"
+                android:layout_marginTop="15dp"
+                android:padding="7dp"
+                android:layout_centerHorizontal="true"
+                android:text="관심인물 추가"
+                android:textSize="@dimen/ftsize_3"
+                android:textColor="@color/clr_red_dark"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="2px"
+                android:layout_below="@+id/lbl01"
+                android:layout_alignLeft="@+id/lbl01"
+                android:layout_alignRight="@+id/lbl01"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:background="@color/clr_red_dark"
+                android:layout_marginTop="0dp"
+                android:id="@+id/lblSep01"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl01"
+                android:layout_below="@+id/lblSep01"
+                android:padding="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="작업일"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/ftsize_1"/>
+
+                <TextView
+                    android:id="@+id/tvWorkDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016.09.28"
+                    android:textColor="@color/clr_gray"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/ftsize_1"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl02"
+                android:layout_below="@+id/rl01"
+                android:layout_marginTop="5dp"
+                android:padding="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="직종"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/ftsize_1"/>
+
+                <TextView
+                    android:id="@+id/tvSkill"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="보통인부"
+                    android:textColor="@color/clr_gray"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/ftsize_1"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl03"
+                android:layout_below="@+id/rl02"
+                android:layout_marginTop="5dp"
+                android:padding="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="일당"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/ftsize_1"/>
+
+                <TextView
+                    android:id="@+id/tvPayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="90,000"
+                    android:textColor="@color/clr_gray"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/ftsize_1"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl04"
+                android:layout_below="@+id/rl03"
+                android:layout_marginTop="5dp"
+                android:padding="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="근로평가"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/ftsize_1"/>
+
+                <TextView
+                    android:id="@+id/tvElagancy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="중"
+                    android:textColor="@color/clr_blue_light"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/ftsize_1"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl05"
+                android:layout_below="@+id/rl04"
+                android:layout_marginTop="5dp"
+                android:padding="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="공수"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/ftsize_1"/>
+
+                <TextView
+                    android:id="@+id/tvWorkAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2.0"
+                    android:textColor="@color/clr_blue_light"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/ftsize_1"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl06"
+                android:layout_below="@+id/rl05"
+                android:layout_marginTop="5dp"
+                android:padding="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="작업확인일시"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/ftsize_1"/>
+
+                <TextView
+                    android:id="@+id/tvWorkConfirmDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016.09.28 17:05:34"
+                    android:textColor="@color/clr_blue_light"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/ftsize_1"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl07"
+                android:layout_below="@+id/rl06"
+                android:layout_marginTop="5dp"
+                android:padding="13dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="작업확인자"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/ftsize_1"/>
+
+                <TextView
+                    android:id="@+id/tvConfirmer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="홍길동"
+                    android:textColor="@color/clr_blue_light"
+                    android:layout_alignParentRight="true"
+                    android:textSize="@dimen/ftsize_1"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llActions"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnReqEverydayWork"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/clr_red_dark"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="익일 근로요청"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_3" />
+
+        <Button
+            android:id="@+id/btnModifyWorkInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/clr_blue_light"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="작업정보 수정"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_3"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+    <com.todddavies.components.progressbar.ProgressWheel
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/pwLoading"
+        android:visibility="invisible"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

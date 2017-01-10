@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidBootstrap/AndroidBootstrap.iml" filepath="$PROJECT_DIR$/AndroidBootstrap/AndroidBootstrap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ManagerK.iml" filepath="$PROJECT_DIR$/ManagerK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-async-http/android-async-http.iml" filepath="$PROJECT_DIR$/android-async-http/android-async-http.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-betterpickers/android-betterpickers.iml" filepath="$PROJECT_DIR$/android-betterpickers/android-betterpickers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dialogplus/dialogplus.iml" filepath="$PROJECT_DIR$/dialogplus/dialogplus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinned-section-listview/pinned-section-listview.iml" filepath="$PROJECT_DIR$/pinned-section-listview/pinned-section-listview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/universalimageloader/universalimageloader.iml" filepath="$PROJECT_DIR$/universalimageloader/universalimageloader.iml" />
+    </modules>
+  </component>
+</project>

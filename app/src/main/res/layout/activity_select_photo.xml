@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#7f000000" />
+
+    <LinearLayout
+        android:id="@+id/back_layout"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="6dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="6dp">
+
+        <TextView
+            android:id="@+id/album_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/detailsignupinfo_album_camera"
+            android:textColor="@color/clr_gray_dark"
+            android:textSize="@dimen/ftsize_3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/clr_separator" />
+
+        <TextView
+            android:id="@+id/album_library"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/detailsignupinfo_album_library"
+            android:textColor="@color/clr_gray_dark"
+            android:textSize="@dimen/ftsize_3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/clr_separator" />
+
+        <TextView
+            android:id="@+id/album_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="@string/detailsignupinfo_album_cancel"
+            android:textColor="@color/clr_gray_dark"
+            android:textSize="@dimen/ftsize_3" />
+
+    </LinearLayout>
+</FrameLayout>
+

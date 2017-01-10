@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="left|center_vertical">
+<!--
+            <ImageView
+                android:id="@+id/licenseagree_backbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:gravity="left|center_vertical"
+                android:maxHeight="30dp"
+                android:minHeight="30dp"
+                android:onClick="returnBack"
+                android:src="@drawable/backarrow" />
+                -->
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/licenseagree_menubartitle"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/licenseagree_menubar_title_en"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000"
+            android:textSize="@dimen/ftsize_1" />
+
+        <TextView
+            android:id="@+id/licenseagree_menubartitle2"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical|center_horizontal"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000000"
+            android:textSize="@dimen/ftsize_1" />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/clr_gray_light"
+        android:padding="10dp">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            >
+
+            <TextView
+                android:id="@+id/signupfinish_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/clr_yellow_01"
+                android:gravity="center_horizontal|center_vertical"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:text="@string/signupfinish_title_en"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/ftsize_5" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@android:color/white"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp">
+
+                    <com.sincere.kboss.utils.CircularImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/photo"
+                            android:scaleType="fitCenter"
+                            android:id="@+id/circlePhoto"
+                            android:background="@android:color/transparent" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/signupfinish_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/signupfinish_name_en"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/ftsize_1" />
+
+                <TextView
+                    android:id="@+id/signupfinish_welcome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/signupfinish_welcomemessage_en"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/ftsize_4" />
+
+                <TextView
+                    android:id="@+id/signupfinish_question"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center_horizontal"
+                    android:text="@string/signupfinish_question_en"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/clr_red_dark"
+                    android:textSize="@dimen/ftsize_5" />
+
+
+                <TextView
+                    android:id="@+id/signupfinish_notation1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/signupfinish_notation1_en"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/ftsize_5"
+
+                    />
+
+                <TextView
+                    android:id="@+id/signupfinish_welcome2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/signupfinish_notation2_en"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/ftsize_5" />
+
+                <TextView
+                    android:id="@+id/signupfinish_button1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/clr_red_dark"
+                    android:gravity="center_horizontal"
+                    android:onClick="gotoUserInfoActivity"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/signupfinish_button1_en"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/ftsize_3" />
+
+                <TextView
+                    android:id="@+id/signupfinish_button2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#96a6b7"
+                    android:gravity="center_horizontal"
+                    android:onClick="gotoSettingsFragment"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/signupfinish_button2_en"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/ftsize_3" />
+
+                <TextView
+                    android:id="@+id/signupfinish_button3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="#3993ef"
+                    android:clickable="true"
+                    android:gravity="center_horizontal"
+                    android:onClick="gotoSpotFragment"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:text="@string/signupfinish_button3_en"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/ftsize_3" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

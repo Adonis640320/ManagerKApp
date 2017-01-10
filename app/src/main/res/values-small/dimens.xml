@@ -1,0 +1,15 @@
+<resources>
+
+    <!--dimen name="ftsize_1">16sp</dimen>
+    <dimen name="ftsize_2">24sp</dimen>
+    <dimen name="ftsize_3">18sp</dimen>
+    <dimen name="ftsize_4">14sp</dimen>
+    <dimen name="ftsize_5">12sp</dimen>
+    <dimen name="ftsize_6">13sp</dimen-->
+
+    <dimen name="fontsize1">16sp</dimen>
+    <dimen name="fontsize2">13sp</dimen>
+
+    <dimen name="ftsize_content">16dp</dimen>
+
+</resources>

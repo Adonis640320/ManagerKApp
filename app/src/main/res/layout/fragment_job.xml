@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bootstrap="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@android:color/white"
+        android:id="@+id/rlHeader">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/backarrow"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:id="@+id/rlTitle"
+            android:layout_centerInParent="true">
+            <TextView
+                android:id="@+id/lblTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/ftsize_1"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/btnStat"
+            android:layout_alignParentRight="true"
+            android:background="@color/clr_yellow_02"
+            android:text="모집중"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/ftsize_4"
+            android:gravity="center"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_margin="2dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:id="@+id/lblSep"
+        android:background="@color/clr_gray_dark"
+        android:layout_below="@+id/rlHeader"/>
+
+    <ScrollView
+        android:id="@+id/svMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lblSep"
+        android:layout_above="@+id/btnGotoWork"
+        android:background="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:id="@+id/rlContents">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rlInfo"
+                android:background="@color/clr_gray_light"
+                android:padding="7dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rl01">
+
+                        <TextView
+                            android:id="@+id/lblWorkday"
+                            android:layout_toRightOf="@+id/lbl01"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/clr_red_dark"
+                            android:text="@string/jobhistory_yearmonthday"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="left"
+                            android:layout_marginLeft="15dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/lbl01"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/clr_gray_dark"
+                            android:text="@string/jobnotificationdetail_workingday"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="right"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rl02"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:id="@+id/lbl02"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/clr_gray_dark"
+                            android:text="@string/jobnotificationdetail_workingplace"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="right"
+                            />
+                        <!--android:layout_centerVertical="true"-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/lbl02"
+                            android:orientation="vertical">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:id="@+id/lblWorkplace"
+                                    android:layout_toLeftOf="@+id/imgTick"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="@android:color/black"
+                                    android:text="@string/jobnotification_city1"
+                                    android:textSize="@dimen/ftsize_4"
+                                    android:gravity="left"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    />
+
+                                <ImageView
+                                    android:id="@+id/imgTick"
+                                    android:layout_width="18dp"
+                                    android:layout_height="24dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/map_mark" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/rlDetailPathInfo"
+                                android:layout_marginTop="5dp">
+                                <TextView
+                                    android:layout_toLeftOf="@+id/ivRightArrow"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="@color/clr_yellow_02"
+                                    android:text="@string/jobnotification_path"
+                                    android:textSize="@dimen/ftsize_4"
+                                    android:gravity="left|center_vertical"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    />
+
+                                <ImageView
+                                    android:id="@+id/ivRightArrow"
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:layout_centerVertical="true"
+                                    android:layout_alignParentRight="true"
+                                    android:background="@drawable/pathright" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rl03"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:id="@+id/lbl03"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/clr_gray_dark"
+                            android:text="@string/jobnotificationdetail_workingtime"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="right"
+                            />
+
+                        <TextView
+                            android:id="@+id/lblWorktime"
+                            android:layout_toRightOf="@+id/lbl03"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/black"
+                            android:text="@string/jobhistory_yearmonthday"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="left"
+                            android:layout_marginLeft="15dp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rl04"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:id="@+id/lbl04"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/clr_gray_dark"
+                            android:text="@string/jobnotificationdetail_kind_count"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="right"
+                            />
+
+                        <TextView
+                            android:id="@+id/lblWorktype"
+                            android:layout_toRightOf="@+id/lbl04"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/black"
+                            android:text="@string/jobnotificationdetail_count"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="left"
+                            android:layout_marginLeft="15dp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rl05WorkDetail"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:id="@+id/lbl06"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/clr_gray_dark"
+                            android:text="@string/jobnotificationdetail_workingdetail"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="right"
+                            />
+
+                        <TextView
+                            android:id="@+id/lblWorkDetail"
+                            android:layout_toRightOf="@+id/lbl06"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/black"
+                            android:text="@string/jobnotificationdetail_workingdetail"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="left"
+                            android:layout_marginLeft="15dp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rl06"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:id="@+id/lbl05"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/clr_gray_dark"
+                            android:text="@string/jobnotificationdetail_perday"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="right"
+                            />
+
+                        <TextView
+                            android:id="@+id/lblPerDay"
+                            android:layout_toRightOf="@+id/lbl05"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/black"
+                            android:text="@string/jobhistory_amount"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="left"
+                            android:layout_marginLeft="15dp"/>
+
+                        <TextView
+                            android:id="@+id/lbl30"
+                            android:layout_toRightOf="@+id/lblPerDay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/black"
+                            android:text=" (실수령액: "
+                            android:textSize="@dimen/ftsize_4"/>
+
+                        <TextView
+                            android:id="@+id/lblRealPay"
+                            android:layout_toRightOf="@+id/lbl30"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/clr_red_dark"
+                            android:text="82,000"
+                            android:textSize="@dimen/ftsize_4"/>
+
+                        <TextView
+                            android:id="@+id/lbl31"
+                            android:layout_toRightOf="@+id/lblRealPay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/black"
+                            android:text=")"
+                            android:textSize="@dimen/ftsize_4"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rl07"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:id="@+id/lbl07"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/clr_gray_dark"
+                            android:text="@string/jobnotificationdetail_loginguy"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="right"
+                            />
+
+                        <TextView
+                            android:id="@+id/lblRegisterMan"
+                            android:layout_toRightOf="@+id/lbl07"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/black"
+                            android:text="@string/jobnotificationdetail_loginguy"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="left"
+                            android:layout_marginLeft="15dp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rl08"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:id="@+id/lbl08"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+
+                            android:textColor="@color/clr_gray_dark"
+                            android:text="@string/jobnotificationdetail_currentboss"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="right"
+                            />
+                        <!--android:layout_centerVertical="true"-->
+                        <TextView
+                            android:id="@+id/lblManager"
+                            android:layout_toRightOf="@+id/lbl08"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/black"
+                            android:text="@string/jobnotificationdetail_currentboss"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="left"
+                            android:layout_marginLeft="15dp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rl09"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:id="@+id/lbl09"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/clr_gray_dark"
+                            android:text="@string/jobnotificationdetail_buildingcompany"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="right"
+                            />
+
+                        <TextView
+                            android:id="@+id/lblBuildingComp"
+                            android:layout_toRightOf="@+id/lbl09"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/black"
+                            android:text="@string/jobnotificationdetail_buildingcompany"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="left"
+                            android:layout_marginLeft="15dp"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rl10"
+                        android:layout_marginTop="15dp">
+
+                        <TextView
+                            android:id="@+id/lbl10"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/clr_gray_dark"
+                            android:text="@string/jobnotificationdetail_wholecount"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="right"
+                            />
+
+                        <TextView
+                            android:id="@+id/lblOrgOffice"
+                            android:layout_toRightOf="@+id/lbl10"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="@android:color/black"
+                            android:text="@string/jobnotificationdetail_wholecount"
+                            android:textSize="@dimen/ftsize_4"
+                            android:gravity="left"
+                            android:layout_marginLeft="15dp"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <!--RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rlReadMore"
+                    android:visibility="invisible"
+                    android:layout_below="@+id/rl05"
+                    android:layout_marginTop="15dp">
+
+                    <TextView
+                        android:id="@+id/lblReadMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="@string/jobnotificationdetail_roadandseedetail"
+                        android:textColor="@color/clr_blue_dark"
+                        android:textSize="@dimen/ftsize_1"
+                        android:layout_marginTop="20dp"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgDownArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/lblReadMore"
+                        android:background="@drawable/downarrow"
+                        android:layout_centerHorizontal="true"
+                        />
+
+                </RelativeLayout-->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/clr_gray_light"
+                android:paddingLeft="7dp"
+                android:paddingRight="7dp"
+                android:paddingBottom="7dp"
+                android:layout_below="@+id/rlInfo">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/white"
+                    android:padding="0dp"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lstLogs"
+                        android:layout_marginTop="0dp"
+                        android:background="@android:color/white"
+                        android:padding="0dp">
+
+                    </ListView>
+
+                    <RelativeLayout
+                        android:id="@+id/rlAgreement"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lstLogs"
+                        android:background="@android:color/white">
+
+                        <CheckBox
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/clr_gray_light"
+                            android:id="@+id/chkAgreement"
+                            android:text="@string/jobnotificationdetail_agreechecking"
+                            android:textSize="@dimen/ftsize_5"
+                            android:textColor="@color/clr_gray_dark"
+                            android:layout_margin="10dp"
+                            android:padding="10dp"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/chkAgreement"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGotoWork"
+        android:layout_alignParentBottom="true"
+        android:textSize="@dimen/ftsize_3"
+        android:text="@string/jobnotificationdetail_supportworking"
+        android:textColor="@android:color/white"
+        android:background="@color/clr_red_dark" />
+
+</RelativeLayout>
