@@ -238,10 +238,13 @@ public class CertActivity extends ActivityTempl {
                     returnBack(null);
             }
         });
+        // modified by Adonis
         imgCert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CertActivity.this, SelectPhotoActivity.class);
+//                Intent intent = new Intent(CertActivity.this, SelectPhotoActivity.class);
+  // startActivityForResult(intent, INTENT_SELECT_CERT);*/
+                Intent intent = new Intent(CertActivity.this, PhotoSelectMainActivity.class);
                 startActivityForResult(intent, INTENT_SELECT_CERT);
             }
         });
@@ -249,7 +252,10 @@ public class CertActivity extends ActivityTempl {
         imgCert02.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CertActivity.this, SelectPhotoActivity.class);
+/*                Intent intent = new Intent(CertActivity.this, SelectPhotoActivity.class);
+                startActivityForResult(intent, INTENT_SELECT_CERT02);*/
+
+                Intent intent = new Intent(CertActivity.this, PhotoSelectMainActivity.class);
                 startActivityForResult(intent, INTENT_SELECT_CERT02);
             }
         });

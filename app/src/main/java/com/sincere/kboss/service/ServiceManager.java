@@ -1507,10 +1507,15 @@ public void workhistoryForJob(int jobid, AsyncHttpResponseHandler handler)
             retval.msg = jsonObject.getString(ServiceParams.SVCC_RETMSG);
 
             if (retval.code == ServiceParams.ERR_NONE) {
-                JSONArray dataArray = jsonObject.getJSONArray(ServiceParams.SVCC_DATA);
 
-                for (int i=0; i<dataArray.length(); i++) {
-                    JSONObject dataObject = dataArray.getJSONObject(i);
+                //modified by Adonis
+
+                JSONObject result = jsonObject.getJSONObject(ServiceParams.SVCC_DATA);
+                JSONArray dataWorker = result.getJSONArray("worker");
+                JSONObject dataWorkerInfo = dataWorker.getJSONObject(0);
+                JSONArray dataOwner = result.getJSONArray("owner");
+                for (int i=0; i<dataOwner.length(); i++) {
+                    JSONObject dataObject = dataOwner.getJSONObject(i);
 
                     STJobWorker anItem = new STJobWorker();
 
@@ -1548,6 +1553,13 @@ public void workhistoryForJob(int jobid, AsyncHttpResponseHandler handler)
                     anItem.f_mainbuilding = getSafeString(dataObject, ServiceParams.F_MAINBUILDING);
                     anItem.f_buildcompany = getSafeString(dataObject, ServiceParams.F_BUILDCOMPANY);
 
+                    // added by Adonis
+                    anItem.f_worker_name = getSafeString(dataWorkerInfo, "f_worker_name");
+                    anItem.f_worker_mphone = getSafeString(dataWorkerInfo, "f_worker_mphone");
+                    anItem.f_worker_citizen = getSafeString(dataWorkerInfo, "f_worker_citizen_id");
+                    anItem.job.f_title = getSafeString(dataObject, "f_title");
+                    anItem.f_owner_mphone = getSafeString(dataObject, "f_owner_phone");
+                    anItem.f_worker_address = getSafeString(dataWorkerInfo, "f_worker_address");
 
                     histories.add(anItem);
                 }

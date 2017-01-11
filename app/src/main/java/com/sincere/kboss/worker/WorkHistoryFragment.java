@@ -339,7 +339,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  <td width=246 style='width:184.3pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
                         "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
                         "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
-                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>02-1234-1234</span></i></p>\n" +
+                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.f_owner_mphone + "</span></i></p>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -355,7 +355,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  <td width=197 style='width:147.4pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
                         "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
                         "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
-                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>김일용</span></i></p>\n" +
+                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.f_worker_name + "</span></i></p>\n" +
                         "  </td>\n" +
                         "  <td width=85 style='width:63.75pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
                         "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
@@ -365,7 +365,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  <td width=246 style='width:184.3pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
                         "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
                         "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
-                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>501010-1234567</span></i></p>\n" +
+                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.f_worker_citizen + "</span></i></p>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -377,7 +377,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  <td width=197 style='width:147.4pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
                         "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
                         "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
-                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>서울 강남구 역삼동 111</span></i></p>\n" +
+                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>"+ workerjob.f_worker_address +"</span></i></p>\n" +
                         "  </td>\n" +
                         "  <td width=85 style='width:63.75pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
                         "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
@@ -387,7 +387,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  <td width=246 style='width:184.3pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
                         "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
                         "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
-                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>010-1234-1234</span></i></p>\n" +
+                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.f_worker_mphone + "</span></i></p>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         "</table>\n" +
@@ -407,11 +407,11 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "\n" +
                         "\t\t\t<p><b>2. 근로장소 및 작업공종 :  </b>\n" +
                         "\t\t\t\t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.f_spot_name + " </span></i> <b> 현장 </b> \n" +
-                        "\t\t\t\t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'> 골조 </span></i> <b> 공종 </b> \n" +
+                        "\t\t\t\t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.job.f_title + "</span></i> <b> 공종 </b> \n" +
                         "\t\t\t</p>\n" +
                         "\t\t\t<p style='margin-bottom:0cm;'><b>3. 임금</b></p>\n" +
                         "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
-                        "\t\t\t\t(1) “을”의 임금은 시급은 <i><span style='font-size:11pt;font-weight:bold;font-family:\"맑은 고딕\";color:#0070C0'>100,000</i></span> 원으로 하고, 연장ㆍ야간근로시(22:00~06:00)에는 시급의 50%를 각 가산하여 지급한다.</p>\n" +
+                        "\t\t\t\t(1) “을”의 임금은 시급은 <i><span style='font-size:11pt;font-weight:bold;font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.job.f_payment + "</i></span> 원으로 하고, 연장ㆍ야간근로시(22:00~06:00)에는 시급의 50%를 각 가산하여 지급한다.</p>\n" +
                         "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
                         "\t\t\t\t(2) 임금은 매일 근로종료 후 당일지급하며, 다만 근로계약이 갱신되는 경우 근로자의 동의하에 특정 요일 또는 월의 특정일을 정하여 지급할 수 있다.</p>\n" +
                         "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
@@ -465,7 +465,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  </td>\n" +
                         "  <td width=349 style='width:64.4pt;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>\n" +
                         "  <p>근로자</p>\n" +
-                        "  <p>성명 : <i style='font-weight:bold;color:#0070C0'>김일용</i></p>\n" +
+                        "  <p>성명 : <i style='font-weight:bold;color:#0070C0'>" + workerjob.f_worker_name + "</i></p>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         "</table>\n" +
@@ -501,7 +501,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t\t현장\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>광교 제 2공구 IPARK</i>\n" +
+                        "  \t<i style='color:#0070C0'>" + workerjob.f_spot_name + " </i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -509,7 +509,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t\t건설사\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>㈜튼튼건설 </i>\n" +
+                        "  \t<i style='color:#0070C0'>㈜" + workerjob.f_buildcompany + "</i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -517,7 +517,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t원청사\t\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>대림건설 </i>\n" +
+                        "  \t<i style='color:#0070C0'>" + workerjob.f_mainbuilding + " </i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -525,7 +525,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t공종\t\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>골조 </i>\n" +
+                        "  \t<i style='color:#0070C0'>" + workerjob.job.f_title + "</i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -533,7 +533,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t\t작업일/시간\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>2016년 10월 26일(08:00~17:00) </i>\n" +
+                        "  \t<i style='color:#0070C0'>" + workerjob.job.f_workdate.substring(0, 4) +"년 " + workerjob.job.f_workdate.substring(5, 7) +"월 " + workerjob.job.f_workdate.substring(8, 10) +"일 (" + workerjob.job.f_worktime_start.substring(0, 5)+ "~" + workerjob.job.f_worktime_end.substring(0, 5)+ ") </i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -549,7 +549,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t작업자\t\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>김일용 </i>\n" +
+                        "  \t<i style='color:#0070C0'>" +workerjob.f_worker_name+ " </i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -557,7 +557,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t주민번호\t\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>500101-1234567 </i>\n" +
+                        "  \t<i style='color:#0070C0'>" + workerjob.f_worker_citizen + " </i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -565,7 +565,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t연락처\t\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>010-1234-1234 </i>\n" +
+                        "  \t<i style='color:#0070C0'>" + workerjob.f_worker_mphone + "</i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " </table>\n" +
@@ -629,17 +629,13 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                 Intent web=new Intent(getActivity(), WebViewActivity.class);
                 web.putExtra("title","작업확인서");
                 String content = "<html >\n" +
-                        "\n" +
                         "<head></head>\n" +
-                        "\n" +
                         "<body lang=KO style='tab-interval:40.0pt'>\n" +
-                        "\n" +
                         "<table width=699 height=60>\n" +
                         "\t<tr><td align=center >\n" +
                         "\t\t<b><span style='font-size:22.0pt;mso-bidi-font-size:11.0pt;line-height:107%;font-family:\"맑은 고딕\";'>작업확인서</span></b>\n" +
                         "  </td></tr>\n" +
                         "</table>\n" +
-                        "\n" +
                         "<b>1. 작업자 정보</b>\n" +
                         "<table border=1 cellspacing=0 cellpadding=0 width=699 style='width:524.25pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;'>\n" +
                         " <tr >\n" +
@@ -647,7 +643,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t작업자\t\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>김일용 </i>\n" +
+                        "  \t<i style='color:#0070C0'>" + workerjob.f_worker_name + "</i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -655,7 +651,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t주민번호\t\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>500101-1234567 </i>\n" +
+                        "  \t<i style='color:#0070C0'>" + workerjob.f_worker_citizen + "</i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -675,7 +671,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t\t현장\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>광교 제 2공구 IPARK</i>\n" +
+                        "  \t<i style='color:#0070C0'>" + workerjob.f_spot_name + " </i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -683,7 +679,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t\t건설사\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>㈜튼튼건설 </i>\n" +
+                        "  \t<i style='color:#0070C0'>㈜" + workerjob.f_buildcompany + "</i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -691,7 +687,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t원청사\t\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>대림건설 </i>\n" +
+                        "  \t<i style='color:#0070C0'>" + workerjob.f_mainbuilding + "</i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -699,7 +695,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t공종\t\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>골조 </i>\n" +
+                        "  \t<i style='color:#0070C0'>" + workerjob.job.f_title+ " </i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -707,7 +703,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t\t작업일/시간\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>2016년 10월 26일(08:00~17:00) </i>\n" +
+                        "  \t<i style='color:#0070C0'>" + workerjob.job.f_workdate.substring(0, 4) +"년 " + workerjob.job.f_workdate.substring(5, 7) +"월 " + workerjob.job.f_workdate.substring(8, 10) +"일(" + workerjob.job.f_worktime_start.substring(0, 5)+ "~" + workerjob.job.f_worktime_end.substring(0, 5)+ ") </i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -724,7 +720,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t작업확인자\t\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>(주)튼튼건설 김소장(010-1234-1234) </i>\n" +
+                        "  \t<i style='color:#0070C0'>(주)" + workerjob.f_buildcompany + " " + workerjob.job.f_owner_name +"(" + workerjob.f_owner_mphone + ") </i>\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         " <tr >\n" +
@@ -732,7 +728,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
                         "  \t작업확인일시\t\n" +
                         "  </td>\n" +
                         "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
-                        "  \t<i style='color:#0070C0'>2016년 10월 26일 20:30:12 </i> \t\n" +
+                        "  \t<i style='color:#0070C0'>" + workerjob.f_signout_time + "</i> \t\n" +
                         "  </td>\n" +
                         " </tr>\n" +
                         "</table>\n" +

@@ -497,8 +497,9 @@ public class EditJobActivity extends ActivityTempl implements DatePickerDialogFr
     void callApiGetWorkerCandidates() {
 
         callApiCancelJob();
-        /*
-        pagecount = 0;
+
+        //comment removed by Adonis
+/*        pagecount = 0;
         handler = new JsonHttpResponseHandler() {
             RetVal retVal;
 
@@ -543,8 +544,8 @@ public class EditJobActivity extends ActivityTempl implements DatePickerDialogFr
 
         showProgress();
 
-        ServiceManager.inst.getWorkerCandidates(job.job.f_id, pagecount, ServiceParams.PAGE_SIZE, handler);
-        */
+        ServiceManager.inst.getWorkerCandidates(job.job.f_id, pagecount, ServiceParams.PAGE_SIZE, handler);*/
+
     }
 
 }

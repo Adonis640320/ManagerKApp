@@ -1,68 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@android:color/transparent"
-    android:gravity="center">
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#7f000000" />
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
 
     <LinearLayout
-        android:id="@+id/back_layout"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@android:color/white"
-        android:gravity="center_horizontal"
-        android:orientation="vertical"
-        android:paddingBottom="6dp"
-        android:paddingLeft="12dp"
-        android:paddingRight="12dp"
-        android:paddingTop="6dp">
+        android:id="@+id/cert_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1" >
+    </LinearLayout>
 
-        <TextView
-            android:id="@+id/album_camera"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="@string/detailsignupinfo_album_camera"
-            android:textColor="@color/clr_gray_dark"
-            android:textSize="@dimen/ftsize_3" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:weightSum="1000">
 
-        <View
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/clr_separator" />
+            android:layout_height="match_parent"
+            android:src="@drawable/camera_area"
+            android:id="@+id/imageView3"
+            android:scaleType="fitXY"
+            android:layout_weight="900"/>
 
-        <TextView
-            android:id="@+id/album_library"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="@string/detailsignupinfo_album_library"
-            android:textColor="@color/clr_gray_dark"
-            android:textSize="@dimen/ftsize_3" />
+        <LinearLayout
+            android:id="@+id/buttonsLayout"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center|right"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:layout_weight="100"
+            android:weightSum="600">
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:background="@color/clr_separator" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:id="@+id/btnCameraBack"
+                android:layout_weight="200"
+                android:src="@drawable/camera_back"
+                android:layout_gravity="right" />
 
-        <TextView
-            android:id="@+id/album_cancel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:padding="8dp"
-            android:text="@string/detailsignupinfo_album_cancel"
-            android:textColor="@color/clr_gray_dark"
-            android:textSize="@dimen/ftsize_3" />
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:id="@+id/btnCameraTake"
+                android:layout_weight="200"
+                android:src="@drawable/camera_take"
+                android:layout_gravity="right" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="0dp"
+                android:id="@+id/btnCameraGallery"
+                android:layout_weight="200"
+                android:src="@drawable/camera_gallery"
+                android:layout_gravity="right" />
+        </LinearLayout>
 
     </LinearLayout>
-</FrameLayout>
 
+
+
+</FrameLayout>

@@ -83,7 +83,7 @@ public class SelectPhotoActivity extends Activity
 		getWindow().setFlags(WindowManager.LayoutParams.ALPHA_CHANGED,
 				WindowManager.LayoutParams.ALPHA_CHANGED);
 		getWindow().setGravity(Gravity.CENTER);
-		this.setContentView(R.layout.activity_select_photo);
+		this.setContentView(R.layout.activity_camera);
 
 		initControls();
 	}

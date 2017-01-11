@@ -1,27 +1,11 @@
 [
     {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\bootstrap_button.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\layout\\bootstrap_button.xml"
-    },
-    {
         "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\bootstrap_thumbnail.xml",
         "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\layout\\bootstrap_thumbnail.xml"
     },
     {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\placeholder.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\layout\\placeholder.xml"
-    },
-    {
         "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\placeholder.xml",
         "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\layout\\placeholder.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\bootstrap_thumbnail_circle.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\layout\\bootstrap_thumbnail_circle.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\bootstrap_thumbnail.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\layout\\bootstrap_thumbnail.xml"
     },
     {
         "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\layout\\bootstrap_button.xml",

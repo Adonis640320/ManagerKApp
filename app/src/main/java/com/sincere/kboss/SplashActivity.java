@@ -68,6 +68,7 @@ public class SplashActivity extends ActivityTempl {
         lbl02.setTypeface(tfGodoB);
         lblLinkCount.setTypeface(tfGodoB);
 
+
     }
 
 

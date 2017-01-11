@@ -8,140 +8,28 @@
         "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_primary_rounded.xml"
     },
     {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\thumbnail_circle_container.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\thumbnail_circle_container.xml"
-    },
-    {
         "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\thumbnail_circle_container.xml",
         "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\thumbnail_circle_container.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_warning.xml",
-        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_warning.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\thumbnail_circle_minimal.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\thumbnail_circle_minimal.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_danger_rounded.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_danger_rounded.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_info.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_info.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_success_rounded.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_success_rounded.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edittext_background_rounded.xml",
-        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background_rounded.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bthumbnail_container_rounded.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bthumbnail_container_rounded.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_info_rounded.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_info_rounded.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_primary.xml",
-        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_primary.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_inverse.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_inverse.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bthumbnail_placeholder_default.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bthumbnail_placeholder_default.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edittext_background_success.xml",
-        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background_success.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_default.xml",
-        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_default.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\thumbnail_circle.xml",
-        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\thumbnail_circle.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edittext_background_success.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background_success.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_warning.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_warning.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edittext_background.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_primary_rounded.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_primary_rounded.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_success_rounded.xml",
-        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_success_rounded.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edittext_background_rounded_success.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background_rounded_success.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_warning_rounded.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_warning_rounded.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\thumbnail_circle_minimal.xml",
-        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\thumbnail_circle_minimal.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edittext_background_rounded_danger.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background_rounded_danger.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edittext_background_rounded.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background_rounded.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_success.xml",
-        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_success.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_danger.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_danger.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edittext_background_rounded_warning.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background_rounded_warning.xml"
     },
     {
         "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edittext_background_warning.xml",
         "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background_warning.xml"
     },
     {
+        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_warning.xml",
+        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_warning.xml"
+    },
+    {
         "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_inverse.xml",
         "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_inverse.xml"
     },
     {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_default.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_default.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_default_rounded.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_default_rounded.xml"
-    },
-    {
         "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bthumbnail_placeholder_default.xml",
         "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bthumbnail_placeholder_default.xml"
+    },
+    {
+        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edittext_background_rounded.xml",
+        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background_rounded.xml"
     },
     {
         "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_danger_rounded.xml",
@@ -154,6 +42,10 @@
     {
         "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_warning_rounded.xml",
         "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_warning_rounded.xml"
+    },
+    {
+        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_primary.xml",
+        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_primary.xml"
     },
     {
         "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_info.xml",
@@ -176,20 +68,24 @@
         "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bthumbnail_container_square.xml"
     },
     {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edittext_background_warning.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background_warning.xml"
+        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edittext_background_success.xml",
+        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background_success.xml"
     },
     {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_primary.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_primary.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edittext_background_danger.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background_danger.xml"
+        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_default.xml",
+        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_default.xml"
     },
     {
         "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\edittext_background_rounded_warning.xml",
         "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background_rounded_warning.xml"
+    },
+    {
+        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\thumbnail_circle.xml",
+        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\thumbnail_circle.xml"
+    },
+    {
+        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_success_rounded.xml",
+        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_success_rounded.xml"
     },
     {
         "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_default_rounded.xml",
@@ -200,27 +96,19 @@
         "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\edittext_background.xml"
     },
     {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_success.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_success.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bthumbnail_container_square.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bthumbnail_container_square.xml"
-    },
-    {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_inverse_rounded.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_inverse_rounded.xml"
+        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\thumbnail_circle_minimal.xml",
+        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\thumbnail_circle_minimal.xml"
     },
     {
         "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bthumbnail_container_rounded.xml",
         "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bthumbnail_container_rounded.xml"
     },
     {
-        "merged": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\thumbnail_circle.xml",
-        "source": "Z:\\original\\ManagerK(1.8)\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\thumbnail_circle.xml"
-    },
-    {
         "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_info_rounded.xml",
         "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_info_rounded.xml"
+    },
+    {
+        "merged": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable\\bbuton_success.xml",
+        "source": "Z:\\original\\ManagerK\\AndroidBootstrap\\build\\intermediates\\bundles\\debug\\res\\drawable\\bbuton_success.xml"
     }
 ]

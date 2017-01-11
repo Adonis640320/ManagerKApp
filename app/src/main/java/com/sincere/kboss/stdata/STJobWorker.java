@@ -24,7 +24,15 @@ public class STJobWorker implements Parcelable {
     public String f_manager;
     public String f_mainbuilding;
     public String f_buildcompany;
-    public String f_spot_content; // added by Adonis
+
+    // added by Adonis
+    public String f_spot_content;
+    public String f_worker_name;
+    public String f_worker_mphone;
+    public String f_worker_citizen;
+    public String f_owner_name;
+    public String f_owner_mphone;
+    public String f_worker_address;
     // public int f_stat; // 1: 모집중, 2:
 
     public STJobWorker() {}
@@ -62,7 +70,13 @@ public class STJobWorker implements Parcelable {
         f_manager = in.readString();
         f_mainbuilding = in.readString();
         f_buildcompany = in.readString();
-        f_spot_content = in.readString(); // added by Adonis
+        // added by Adonis
+        f_spot_content = in.readString();
+        f_worker_name = in.readString();
+        f_worker_mphone = in.readString();
+        f_worker_citizen = in.readString();
+        f_owner_mphone = in.readString();
+        f_worker_address = in.readString();
     }
 
     @Override
@@ -104,7 +118,13 @@ public class STJobWorker implements Parcelable {
         dest.writeString(f_manager);
         dest.writeString(f_mainbuilding);
         dest.writeString(f_buildcompany);
-        dest.writeString(f_spot_content); // added by Adonis
+        // added by Adonis
+        dest.writeString(f_spot_content);
+        dest.writeString(f_worker_name);
+        dest.writeString(f_worker_mphone);
+        dest.writeString(f_worker_citizen);
+        dest.writeString(f_owner_mphone);
+        dest.writeString(f_worker_address);
     }
 
     public static final Parcelable.Creator<STJobWorker> CREATOR

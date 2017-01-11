@@ -25,6 +25,9 @@ public class STJob implements Parcelable {
     public int f_stat;
     public int f_automatch;
 
+    //added by Adonis
+    public String f_title;
+
     public STJob() {}
 
     public STJob(Parcel in) {
@@ -45,6 +48,8 @@ public class STJob implements Parcelable {
         f_owner_name = in.readString();
         f_stat = in.readInt();
         f_automatch = in.readInt();
+        //added by Adonis
+        f_title = in.readString();
     }
 
     @Override
@@ -71,6 +76,8 @@ public class STJob implements Parcelable {
         dest.writeString(f_owner_name);
         dest.writeInt(f_stat);
         dest.writeInt(f_automatch);
+        //added by Adonis
+        dest.writeString(f_title);
     }
 
     public static final Parcelable.Creator<STJob> CREATOR

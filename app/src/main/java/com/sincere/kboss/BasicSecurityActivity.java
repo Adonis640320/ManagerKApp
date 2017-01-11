@@ -215,8 +215,14 @@ public class BasicSecurityActivity extends ActivityTempl implements DatePickerDi
         imgCert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+/*
                 Intent intent = new Intent(BasicSecurityActivity.this, SelectPhotoActivity.class);
+                startActivityForResult(intent, INTENT_SELECT_PICTURE);*/
+
+                Intent intent = new Intent(BasicSecurityActivity.this, PhotoSelectMainActivity.class);
                 startActivityForResult(intent, INTENT_SELECT_PICTURE);
+
             }
         });
 
