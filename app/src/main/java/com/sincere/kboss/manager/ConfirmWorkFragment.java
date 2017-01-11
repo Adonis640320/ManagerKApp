@@ -139,10 +139,7 @@ public class ConfirmWorkFragment extends FragmentTempl {
 
     public class ConfirmSectionsPagerAdapter extends FragmentPagerAdapter {
 
-
-        public ConfirmSectionsPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
+        public ConfirmSectionsPagerAdapter(FragmentManager fm) { super(fm);}
 
         @Override
         public Fragment getItem(int position) {

@@ -46,7 +46,7 @@ public class ManageSpotFragment extends FragmentTempl {
     Button btnNewJob;
 
     private SpotSectionsPagerAdapter mSectionsPagerAdapter;
-    public static int curFrag = 1;
+    public static int curFrag = 0;
     //public static DailyJobsFragment selDailyJobsFragment = null;
 
     //public static DailyJobsFragment dailyJobsFragment1 = null,dailyJobsFragment2 = null,dailyJobsFragment3 = null,dailyJobsFragment4 = null;
@@ -132,8 +132,9 @@ public class ManageSpotFragment extends FragmentTempl {
         });
         viewPager.setAdapter(mSectionsPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
-        viewPager.setCurrentItem(1);
-
+        tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE); // added by Adonis
+        viewPager.setCurrentItem(28);
+//        viewPager.setCurrentItem(0);
 //        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         btnNewJob = (Button) v.findViewById(R.id.btnNewJob);
@@ -170,18 +171,19 @@ public class ManageSpotFragment extends FragmentTempl {
         } else {
             spot_id = MainActivity.g_spots.get(MainActivity.g_curSpot).f_id;
         }
-
-        for (int i=0; i<4; i++) {
+        //modified by Adonis
+        int st = curFrag-1,ed = curFrag+2;
+        if(curFrag<1) {st = 0; ed = 3;}
+        if(curFrag>56) { st = 54;  ed = 57;}
+        for(int i = 0; i < 57; i++){
+//        for (int i=st; i<ed; i++) {
             DailyJobsFragment frag = mSectionsPagerAdapter.getFragment(i);
             if (frag == null) {
-                Log.e("test","Manger - UpdateChildFragment null "+i);
                 mSectionsPagerAdapter.instantiateItem(viewPager, i);
             } else {
-                Log.e("test","Manger - UpdateChildFragment "+i);
-                frag.updateJobList(Functions.getDateTimeStringFromToday(i), spot_id);
+                frag.updateJobList(Functions.getDateTimeStringFromToday(i - 28), spot_id);
             }
         }
-
     }
 
     void callApiGetSpots() {
@@ -344,10 +346,13 @@ public class ManageSpotFragment extends FragmentTempl {
             } else {
                 spot_id = MainActivity.g_spots.get(MainActivity.g_curSpot).f_id;
             }
-            DailyJobsFragment newfrag = null;
-            newfrag = new DailyJobsFragment();
+
+            DailyJobsFragment newfrag = new DailyJobsFragment();
             Bundle args = new Bundle();
-            args.putString(DailyJobsFragment.ARG_DATE, Functions.getDateTimeStringFromToday(position));
+
+            //modified by Adonis
+            //args.putString(DailyJobsFragment.ARG_DATE, Functions.getDateTimeStringFromToday(position)); //
+            args.putString(DailyJobsFragment.ARG_DATE, Functions.getDateTimeStringFromToday(position - 28));
             args.putInt(DailyJobsFragment.ARG_SPOT_ID, spot_id);
             newfrag.setArguments(args);
 
@@ -359,12 +364,18 @@ public class ManageSpotFragment extends FragmentTempl {
         @Override
         public int getCount() {
             // Show 4 total pages.
-            return 4;
+            //modified by Adonis
+            return 57;
+//            return 4;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
-            switch (position) {
+            // modified by Adonis
+            if(position<57) {
+                return Functions.getDateStringWeekday(position - 28);
+            }
+/*            switch (position) {
                 case 0:
                     return Functions.getDateStringWeekday(0);
                 case 1:
@@ -373,7 +384,7 @@ public class ManageSpotFragment extends FragmentTempl {
                     return Functions.getDateStringWeekday(2);
                 case 3:
                     return Functions.getDateStringWeekday(3);
-            }
+            }*/
             return null;
         }
 

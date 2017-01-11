@@ -110,6 +110,13 @@ public class NewJobActivity extends ActivityTempl implements DatePickerDialogFra
 //        lblWorkday.setText(Functions.getDateStringWeekday_2(1));
         lblWorkday.setText( getIntent().getCharSequenceExtra(SELECTED_DATE_STR) );
 
+        String selectedDateStr = getIntent().getCharSequenceExtra(SELECTED_DATE_STR).toString();
+
+        int year = 100 + Character.getNumericValue(selectedDateStr.charAt(0)) * 10 + Character.getNumericValue(selectedDateStr.charAt(1));
+        int month = Character.getNumericValue(selectedDateStr.charAt(3)) * 10 + Character.getNumericValue(selectedDateStr.charAt(4));
+        int da = Character.getNumericValue(selectedDateStr.charAt(6)) * 10 + Character.getNumericValue(selectedDateStr.charAt(7));
+        workday = new Date(year, month - 1, da );
+
         signintime.setHours(7);
         signintime.setMinutes(0);
         lblSigninTime.setText("07:00");
@@ -321,15 +328,19 @@ public class NewJobActivity extends ActivityTempl implements DatePickerDialogFra
                     }
                     SimpleDateFormat dayFormat = new SimpleDateFormat("yy.MM.dd(E)", Locale.KOREAN);
                     String weekDay = dayFormat.format(workday);
+
+                    //modified by Adonis
                     int pos = 0;
-                    for(int i=0;i<4;i++) {
-                        if(weekDay.equals(Functions.getDateStringWeekday(i))) {
+                    //for(int i=0;i<4;i++) {
+                    for(int i=0;i<57;i++) {
+                        if(weekDay.equals(Functions.getDateStringWeekday(i - 28))) {
                             pos = i;
                             break;
                         }
                     }
 
-                    ManageSpotFragment.registeredFragments.get(pos).updateJobList(Functions.getDateTimeStringFromToday(pos), spot_id);
+                    // ManageSpotFragment.registeredFragments.get(pos).updateJobList(Functions.getDateTimeStringFromToday(pos), spot_id);
+                    ManageSpotFragment.registeredFragments.get(pos).updateJobList(Functions.getDateTimeStringFromToday(pos - 28), spot_id); // modified by Adonis
                 }
             }
 
@@ -362,7 +373,6 @@ public class NewJobActivity extends ActivityTempl implements DatePickerDialogFra
         String workercount = edtWorkerCount.getText().toString();
         String payment = edtPayment.getText().toString();
         int automatch = chkAutoMatch.isChecked() ? 1 : 0;
-
 
         ServiceManager.inst.addJob(spot_id, jobdate, worktime_start, worktime_end,
                 skillid, jobdetail, workercount, payment, automatch, handler);

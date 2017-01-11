@@ -31,6 +31,12 @@
         <item name="textAllCaps">true</item>
     </style>
 
+    <style name="MyConfirmTabTextAppearance" parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <!--ended by Adonis-->
+
     <style name="firstscreen_textview">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>

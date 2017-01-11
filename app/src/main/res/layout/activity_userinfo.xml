@@ -734,7 +734,7 @@
                         android:gravity="left|center_vertical">
                         <TextView android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/personalinfosetting_appversion"
+                            android:text="@string/personalinfosetting_appversionstr"
                             android:textColor="#000000"
                             android:textSize="@dimen/ftsize_1"/>
                     </LinearLayout>
@@ -746,7 +746,7 @@
                         android:orientation="horizontal">
                         <TextView android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="1.0"
+                            android:text="@string/personalinfosetting_appversion"
                             android:textColor="@color/clr_red_dark"
                             android:textSize="@dimen/ftsize_1"
                             android:layout_marginRight="10dp"/>

@@ -17,6 +17,7 @@ import com.sincere.kboss.R;
 import com.sincere.kboss.stdata.STJobWorker;
 import com.sincere.kboss.worker.FragmentTempl;
 
+import net.daum.mf.map.api.MapLayout;
 import net.daum.mf.map.api.MapPoint;
 import net.daum.mf.map.api.CameraPosition;
 import net.daum.mf.map.api.CameraUpdateFactory;
@@ -27,7 +28,7 @@ import net.daum.mf.map.api.MapPointBounds;
 import net.daum.mf.map.api.MapView;
 
 
-public class MapViewActivity extends ActivityTempl implements MapView.MapViewEventListener {
+public class MapViewActivity extends ActivityTempl implements MapView.OpenAPIKeyAuthenticationResultListener, MapView.MapViewEventListener {
     private MapView mapView;
     double m_longitude,m_latitude;
     String address = "";
@@ -49,10 +50,17 @@ public class MapViewActivity extends ActivityTempl implements MapView.MapViewEve
                 finish();
             }
         });
+//modified by Adonis
 
-        mapView = (MapView)findViewById(R.id.map_view);
-        mapView.setMapViewEventListener(this);
+        MapLayout mapLayout = new MapLayout(this);
+        mapView = mapLayout.getMapView();
+
+//        MapView mapView = new MapView(this);
+//        mMapView = (MapView)findViewById(R.id.map_view);
         mapView.setDaumMapApiKey("c66045c43200c1595d8b9c687b45c55b");
+        mapView.setOpenAPIKeyAuthenticationResultListener(this);
+        mapView.setMapViewEventListener(this);
+        mapView.setMapType(MapView.MapType.Standard);
 
         try {
             m_longitude = getIntent().getDoubleExtra("logitude",127.005515);
@@ -67,6 +75,9 @@ public class MapViewActivity extends ActivityTempl implements MapView.MapViewEve
 
         lblTitle = (TextView) findViewById(R.id.lblTitle);
         lblTitle.setText(address);
+
+        ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
+        mapViewContainer.addView(mapLayout);
     }
 
     private void controlMapTile(int which) {
@@ -118,6 +129,11 @@ public class MapViewActivity extends ActivityTempl implements MapView.MapViewEve
         mapView.addPOIItem(poiItem1);
 
         mapView.setMapCenterPointAndZoomLevel(MapPoint.mapPointWithGeoCoord(m_latitude,m_longitude), 2, true);
+    }
+
+    @Override
+    public void onDaumMapOpenAPIKeyAuthenticationResult(MapView mapView, int resultCode, String resultMessage) {
+        Log.i("",	String.format("Open API Key Authentication Result : code=%d, message=%s", resultCode, resultMessage));
     }
 
     @Override

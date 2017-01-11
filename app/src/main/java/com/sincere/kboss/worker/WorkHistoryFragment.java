@@ -198,7 +198,7 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
 
         lblWorkday.setText(Functions.getDateStringWeekday_3(workerjob.job.f_workdate));
         lblWorkplace.setText(workerjob.job.f_address);
-        lblWorktime.setText(workerjob.job.f_worktime_start.substring(0,5));
+        lblWorktime.setText(workerjob.job.f_worktime_start.substring(0,5) + " ~ " + workerjob.job.f_worktime_end.substring(0,5)); // modified by Adonis
         lblWorktype.setText(String.format("%s / %d명", Functions.getJobsString(String.valueOf(workerjob.job.f_skill), getActivity().getApplicationContext()), workerjob.job.f_worker_count));
 
         int realpay = workerjob.job.f_payment - (int)(workerjob.job.f_payment* STPayType.getCancelledPercent(KbossApplication.g_userinfo.f_pay_type)/100);
@@ -279,7 +279,201 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
             public void onClick(View v) {
                 Intent web=new Intent(getActivity(), WebViewActivity.class);
                 web.putExtra("title","전자근로계약서");
-                web.putExtra("url","file:///android_res/raw/"+"a.html");
+//                web.putExtra("url","file:///android_res/raw/"+"a.html");
+
+                String content = "<html >\n" +
+                        "\n" +
+                        "<head></head>\n" +
+                        "\n" +
+                        "<body lang=KO style='tab-interval:40.0pt'>\n" +
+                        "\n" +
+                        "<table width=699 height=60>\n" +
+                        "\t<tr><td align=center >\n" +
+                        "\t\t<b><span style='font-size:22.0pt;mso-bidi-font-size:11.0pt;line-height:107%;font-family:\"맑은 고딕\";'>근로계약서</span></b>\n" +
+                        "  </td></tr>\n" +
+                        "</table>\n" +
+                        "\n" +
+                        "<table border=1 cellspacing=0 cellpadding=0 width=699 style='width:524.25pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        " <tr >\n" +
+                        "  <td width=86 rowspan=2 style='width:64.4pt;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<span style='font-family:\"맑은 고딕\";'>사용자(갑)</span></p>\n" +
+                        "  </td>\n" +
+                        "  <td width=86 style='width:64.4pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<span style='font-family:\"맑은 고딕\";'>상호</span></p>\n" +
+                        "  </td>\n" +
+                        "  <td width=197 style='width:147.4pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>㈜" + workerjob.f_buildcompany + "</span></i></p>\n" +
+                        "  </td>\n" +
+                        "  <td width=85 style='width:63.75pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<span style='font-family:\"맑은 고딕\"; '>대표자</span></p>\n" +
+                        "  </td>\n" +
+                        "  <td width=246 style='width:184.3pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.job.f_owner_name + "</span></i></p>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=86 style='width:64.4pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<span style='font-family:\"맑은 고딕\";'>주소</span></p>\n" +
+                        "  </td>\n" +
+                        "  <td width=197 style='width:147.4pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.job.f_address + "</span></i></p>\n" +
+                        "  </td>\n" +
+                        "  <td width=85 style='width:63.75pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<span style='font-family:\"맑은 고딕\"; '>전화번호</span></p>\n" +
+                        "  </td>\n" +
+                        "  <td width=246 style='width:184.3pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>02-1234-1234</span></i></p>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=86 rowspan=2 style='width:64.4pt;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<span style='font-family:\"맑은 고딕\";'>근로자(을)</span></p>\n" +
+                        "  </td>\n" +
+                        "  <td width=86 style='width:64.4pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<span style='font-family:\"맑은 고딕\";'>성명</span></p>\n" +
+                        "  </td>\n" +
+                        "  <td width=197 style='width:147.4pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>김일용</span></i></p>\n" +
+                        "  </td>\n" +
+                        "  <td width=85 style='width:63.75pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<span style='font-family:\"맑은 고딕\"; '>주민번호</span></p>\n" +
+                        "  </td>\n" +
+                        "  <td width=246 style='width:184.3pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>501010-1234567</span></i></p>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=86 style='width:64.4pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<span style='font-family:\"맑은 고딕\";'>주소</span></p>\n" +
+                        "  </td>\n" +
+                        "  <td width=197 style='width:147.4pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>서울 강남구 역삼동 111</span></i></p>\n" +
+                        "  </td>\n" +
+                        "  <td width=85 style='width:63.75pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<span style='font-family:\"맑은 고딕\"; '>전화번호</span></p>\n" +
+                        "  </td>\n" +
+                        "  <td width=246 style='width:184.3pt;border:solid windowtext 1.0pt;border-left:none;mso-border-left-alt:solid windowtext .5pt;mso-border-alt:solid windowtext .5pt;\n" +
+                        "  padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p    align=center style='margin-bottom:0cm;margin-bottom:.0001pt;text-align:center;line-height:normal'>\n" +
+                        "  \t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>010-1234-1234</span></i></p>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        "</table>\n" +
+                        "<p><span style='font-family:\"맑은 고딕\";'>“갑”과“을”은 아래 근로조건을 성실 이행할 것을 약정하고 근로계약을 체결한다.</span></p>\t\n" +
+                        "<table width=699>\n" +
+                        "\t<tr>\n" +
+                        "\t\t<td align=center >---------- 아&nbsp;&nbsp;&nbsp;&nbsp;래 ----------\n" +
+                        "\t\t</td>\n" +
+                        "\t</tr>\n" +
+                        "\t<tr>\n" +
+                        "\t\t<td>\n" +
+                        "\t\t\t<p><b>1. 근로계약기간 :    </b>\n" +
+                        "\t\t\t\t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.job.f_workdate.substring(0, 4) +"</span></i> <b>년   </b>  \n" +
+                        "\t\t\t\t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.job.f_workdate.substring(5, 7) +"</span></i>  <b>월   </b>   \n" +
+                        "\t\t\t\t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.job.f_workdate.substring(8, 10) +"</span></i>  <b>일</b>\n" +
+                        "\t\t\t</p>\n" +
+                        "\n" +
+                        "\t\t\t<p><b>2. 근로장소 및 작업공종 :  </b>\n" +
+                        "\t\t\t\t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.f_spot_name + " </span></i> <b> 현장 </b> \n" +
+                        "\t\t\t\t<i><span style='font-family:\"맑은 고딕\";color:#0070C0'> 골조 </span></i> <b> 공종 </b> \n" +
+                        "\t\t\t</p>\n" +
+                        "\t\t\t<p style='margin-bottom:0cm;'><b>3. 임금</b></p>\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
+                        "\t\t\t\t(1) “을”의 임금은 시급은 <i><span style='font-size:11pt;font-weight:bold;font-family:\"맑은 고딕\";color:#0070C0'>100,000</i></span> 원으로 하고, 연장ㆍ야간근로시(22:00~06:00)에는 시급의 50%를 각 가산하여 지급한다.</p>\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
+                        "\t\t\t\t(2) 임금은 매일 근로종료 후 당일지급하며, 다만 근로계약이 갱신되는 경우 근로자의 동의하에 특정 요일 또는 월의 특정일을 정하여 지급할 수 있다.</p>\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
+                        "\t\t\t\t(3) 임금지급시 근로소득세 및 고용보험료, 건강보험료(1월 이상 근로시), 국민연금(1월 이상 근로시) 본인부담금 내지 기여금을 원천징수한 후 지급한다.</p>\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
+                        "\t\t\t\t(4) 임금지급방식은 본인에게 직접 지급하는 것을 원칙으로 한다.</p>\n" +
+                        "\n" +
+                        "\t\t\t<p style='margin-bottom:0cm;'><b>4. 근로시간</b></p>\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
+                        "\t\t\t\t(1) 시업 및 종업시간 :  <i><span style='font-size:11pt;font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.job.f_worktime_start.substring(0, 5) +"</span></i> ~ \n" +
+                        "\t\t\t\t\t\t\t\t\t\t\t\t\t<i><span style='font-size:11pt;font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.job.f_worktime_end.substring(0,5) +"</span></i></p>\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:30pt;'>\n" +
+                        "\t\t\t\t  휴게시간 : 09:00-09:30, 12:00-13:00, 15:30-16:00</p>\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\t\t\t  \n" +
+                        "\t\t\t\t(2) 근로시간은 휴게시간을 제외하고 1일 8시간, 1주 40시간을 원칙으로 한다.</p>\n" +
+                        "\t\t\t\t\n" +
+                        "\t\t\t<p style='margin-bottom:0cm;'><b>5. 휴일 및 휴가</b></p>\t\t\t\t\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
+                        "\t\t\t\t (1) 1주일(월~금)간 계속 근로한 경우 토요일은 무급(휴일, 휴무일), 일요일은 유급주휴일로 한다.</p>\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
+                        "\t\t\t\t (2) 근로자의 날, 연차유급휴가는 근로기준법상 요건에 해당되는 때에 준다.</p>\n" +
+                        "\t\t\t\t  \n" +
+                        "\t\t\t<p style='margin-bottom:0cm;'><b>6. 근로계약의 해지사유</b></p>\t\t\t\t\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
+                        "\t\t\t\t (1) 정당한 업무지시를 불이행함으로써 사고나 손실을 야기시킨 때</p>\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
+                        "\t\t\t\t (2) 고의 또는 중대한 과실로 사고나 손실을 야기시킨 때</p>\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
+                        "\t\t\t\t (3) 신체ㆍ정신상 장애로 해당 업무를 수행할 수 없을 때</p>\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
+                        "\t\t\t\t (4) 불법체류자로 밝혀진 때</p>\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
+                        "\t\t\t\t (5) 그 외 “갑”의 「현장계약직 취업규칙」상의 해고기준에 해당될 때</p>\n" +
+                        "\t\t\t<p style='margin-bottom:0cm;'><b>7. 기타</b></p>\t\t\t\t\n" +
+                        "\t\t\t<p style='font-size:9.0pt;margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:14.2pt;'>\n" +
+                        "\t\t\t\t (1) 본 계약서상에 명시되지 않은 사항은 근로기준법에 따른다.</p>\n" +
+                        "\t\t</td>\n" +
+                        "\t</tr>\n" +
+                        "\t<tr height=60>\n" +
+                        "\t\t<td align=center >\n" +
+                        "\t\t\t<b><i style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.job.f_workdate.substring(0, 4) +"</i> 년 <i style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.job.f_workdate.substring(5, 7) +"</i> 월 <i style='font-family:\"맑은 고딕\";color:#0070C0'>" + workerjob.job.f_workdate.substring(8, 10) +"</i> 일</b>\n" +
+                        "\t\t</td>\n" +
+                        "\t</tr>\n" +
+                        "</table>\n" +
+                        "\n" +
+                        "<table border=1 cellspacing=0 cellpadding=0 width=699 style='width:524.25pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        " <tr >\n" +
+                        "  <td width=349 style='width:64.4pt;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p>사용자</p>\n" +
+                        "  <p>현장대리인 : <i style='font-weight:bold;color:#0070C0'>㈜" + workerjob.f_buildcompany + " " + workerjob.job.f_owner_name  + "</i> (직인생략)</p>\n" +
+                        "  </td>\n" +
+                        "  <td width=349 style='width:64.4pt;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt 0cm 5.4pt'>\n" +
+                        "  <p>근로자</p>\n" +
+                        "  <p>성명 : <i style='font-weight:bold;color:#0070C0'>김일용</i></p>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        "</table>\n" +
+                        "\t\n" +
+                        "\t\n" +
+                        "</body>\n" +
+                        "</html>";
+                web.putExtra("content",content);
                 startActivity(web);
             }
         });
@@ -289,7 +483,142 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
             public void onClick(View v) {
                 Intent web=new Intent(getActivity(), WebViewActivity.class);
                 web.putExtra("title","임금지급영수증");
-                web.putExtra("url","file:///android_res/raw/"+"b.html");
+                String content = "<html >\n" +
+                        "\n" +
+                        "<head></head>\n" +
+                        "\n" +
+                        "<body lang=KO style='tab-interval:40.0pt'>\n" +
+                        "\n" +
+                        "<table width=699 height=60>\n" +
+                        "\t<tr><td align=center >\n" +
+                        "\t\t<b><span style='font-size:22.0pt;mso-bidi-font-size:11.0pt;line-height:107%;font-family:\"맑은 고딕\";'>노무비지급영수증</span></b>\n" +
+                        "  </td></tr>\n" +
+                        "</table>\n" +
+                        "<b>1.작업정보</b>\n" +
+                        "<table border=1 cellspacing=0 cellpadding=0 width=699 style='width:524.25pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;'>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t\t현장\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>광교 제 2공구 IPARK</i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t\t건설사\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>㈜튼튼건설 </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t원청사\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>대림건설 </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t공종\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>골조 </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t\t작업일/시간\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>2016년 10월 26일(08:00~17:00) </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t작업내용\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>보통인부(청소) </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t작업자\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>김일용 </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t주민번호\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>500101-1234567 </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t연락처\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>010-1234-1234 </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " </table>\n" +
+                        "<br> \n" +
+                        "<b>2.지급정보</b>\n" +
+                        "<table border=1 cellspacing=0 cellpadding=0 width=699 style='width:524.25pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;'>\n" +
+                        "\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t지급금액\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>90,000 </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t지급계좌\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>신한 123-12-123456 </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t지급일\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>2016년 10월 26일 </i><br>\n" +
+                        "  \t<i style='font-size:9pt;color:#0070C0'>(지급정보 처리일시 : 2016.10.26 20:30:10) </i>  \t\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        "  <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t지급처\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "    (주)인투웍스\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " </table>\n" +
+                        "<table width=699>\n" +
+                        " <tr>\n" +
+                        "  <td>\n" +
+                        " \t<p style='text-align:left;font-size:10pt'>\n" +
+                        "\t본 지급영수증은 가입약관에 따라 김소장 앱에 등록된 지급정보를 기준으로 작성되었으며, ㈜인투웍스가 해당 작업에 대한 노무비를 지급완료했음을 증명합니다.</p>\n" +
+                        " \t</td>\n" +
+                        " </tr>\n" +
+                        "</table>\n" +
+                        "</body>\n" +
+                        "</html>";
+                web.putExtra("content", content);
+
                 startActivity(web);
             }
         });
@@ -299,7 +628,125 @@ public class WorkHistoryFragment extends FragmentTempl implements View.OnClickLi
             public void onClick(View v) {
                 Intent web=new Intent(getActivity(), WebViewActivity.class);
                 web.putExtra("title","작업확인서");
-                web.putExtra("url","file:///android_res/raw/"+"c.html");
+                String content = "<html >\n" +
+                        "\n" +
+                        "<head></head>\n" +
+                        "\n" +
+                        "<body lang=KO style='tab-interval:40.0pt'>\n" +
+                        "\n" +
+                        "<table width=699 height=60>\n" +
+                        "\t<tr><td align=center >\n" +
+                        "\t\t<b><span style='font-size:22.0pt;mso-bidi-font-size:11.0pt;line-height:107%;font-family:\"맑은 고딕\";'>작업확인서</span></b>\n" +
+                        "  </td></tr>\n" +
+                        "</table>\n" +
+                        "\n" +
+                        "<b>1. 작업자 정보</b>\n" +
+                        "<table border=1 cellspacing=0 cellpadding=0 width=699 style='width:524.25pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;'>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t작업자\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>김일용 </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t주민번호\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>500101-1234567 </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t연락처\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>010-1234-1234 </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        "</table>\n" +
+                        "<br>\n" +
+                        "<b>2.작업 정보</b>\n" +
+                        "<table border=1 cellspacing=0 cellpadding=0 width=699 style='width:524.25pt;border-collapse:collapse;border:none;mso-border-alt:solid windowtext .5pt;mso-yfti-tbllook:1184;'>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t\t현장\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>광교 제 2공구 IPARK</i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t\t건설사\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>㈜튼튼건설 </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t원청사\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>대림건설 </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t공종\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>골조 </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t\t작업일/시간\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>2016년 10월 26일(08:00~17:00) </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t작업내용\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>보통인부(청소) </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        "\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t작업확인자\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>(주)튼튼건설 김소장(010-1234-1234) </i>\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        " <tr >\n" +
+                        "  <td width=170 bgcolor=lightgrey style='font-weight:bold;text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t작업확인일시\t\n" +
+                        "  </td>\n" +
+                        "  <td width=431 style='text-align:center;border:solid windowtext 1.0pt;mso-border-alt:solid windowtext .5pt;'>\n" +
+                        "  \t<i style='color:#0070C0'>2016년 10월 26일 20:30:12 </i> \t\n" +
+                        "  </td>\n" +
+                        " </tr>\n" +
+                        "</table>\n" +
+                        "<table width=699>\n" +
+                        " <tr>\n" +
+                        "  <td>\n" +
+                        " \t<p style='text-align:left;font-size:10pt'>\n" +
+                        "\t본 작업확인서는 현장근로자가 김소장앱을 통해 작업확인 처리한 정보를 기반으로 작성되었습니다.</p>\n" +
+                        " \t</td>\n" +
+                        " </tr>\n" +
+                        "</table>\n" +
+                        "</body>\n" +
+                        "</html>";
+                web.putExtra("content", content);
                 startActivity(web);
             }
         });

@@ -61,14 +61,23 @@ public class WebViewActivity extends Activity {
         WebSettings settings = webView.getSettings();
         settings.setDefaultTextEncodingName("utf-8");
         settings.setJavaScriptEnabled(true);
+
 //modified by Adonis
         String content = getIntent().getStringExtra("content");
-        content = "<html><body>" + content + "</body></html>";
-//        if(content != null)
-        webView.loadData(content, "text/html; charset=utf-8", "UTF-8");
 
-//        if(url != "")
-//            webView.loadUrl(url);
+/*        if( url != "" ){
+            webView.loadUrl(url);
+        }
+        else{*/
+            if(content != null){
+                content = "<html><body>" + content + "</body></html>";
+            }
+            else{
+                content = "<html><body>" + "현시할 자료가 없습니다" + "</body></html>";
+            }
+            webView.loadData(content, "text/html; charset=utf-8", "UTF-8");
+//        }
+
     }
 }
 

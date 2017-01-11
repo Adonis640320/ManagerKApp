@@ -10,14 +10,13 @@
     android:orientation="vertical"
     android:background="#ffffff">
 
-
+<!--modified by Adonis-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/title_tv"
-            android:layout_toLeftOf="@+id/imgBadge"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="18dp"
             android:textColor="#000000"/>
@@ -26,8 +25,7 @@
             android:layout_height="20dp"
             android:id="@+id/imgBadge"
             android:background="@android:color/transparent"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
+            android:layout_toRightOf="@id/title_tv"
             android:layout_marginTop="3dp"
             android:visibility="invisible"
             android:src="@drawable/badge"/>

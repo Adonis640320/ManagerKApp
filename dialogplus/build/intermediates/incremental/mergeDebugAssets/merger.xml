@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="Z:\original\ManagerK(1.8)\ManagerK\dialogplus\src\main\assets"/><source path="Z:\original\ManagerK(1.8)\ManagerK\dialogplus\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="Z:\original\ManagerK(1.8)\ManagerK\dialogplus\src\debug\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="Z:\original\ManagerK\dialogplus\src\main\assets"/><source path="Z:\original\ManagerK\dialogplus\build\generated\assets\shaders\debug"/></dataSet><dataSet config="debug"><source path="Z:\original\ManagerK\dialogplus\src\debug\assets"/></dataSet></merger>

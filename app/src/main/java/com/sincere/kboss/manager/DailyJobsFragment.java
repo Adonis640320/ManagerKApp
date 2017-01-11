@@ -73,7 +73,7 @@ public class DailyJobsFragment extends FragmentTempl {
         lblNoJobs = (TextView) v.findViewById(R.id.lblNoJobs);
 
         lstItems = (PullToRefreshListView) v.findViewById(R.id.lstItems);
-        lstItems.setMode(PullToRefreshBase.Mode.PULL_FROM_END);
+        lstItems.setMode(PullToRefreshBase.Mode.PULL_FROM_START);
         lstItems.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
             @Override
             public void onRefresh(PullToRefreshBase<ListView> refreshView) {
@@ -103,7 +103,6 @@ public class DailyJobsFragment extends FragmentTempl {
         if (lstItems == null) {
             return;
         }
-
 
         callApiGetJobs();
     }

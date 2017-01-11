@@ -201,6 +201,22 @@ public class AddFavoriteFragment extends FragmentTempl {
                     Functions.showToast(getActivity(), retVal.msg);
                 } else {
                     Toast.makeText(getActivity(),"익일 근로요청되였습니다.",Toast.LENGTH_SHORT).show();
+
+                    // added by Adonis
+
+                    ((MainActivity) getActivity()).vpContents.setCurrentItem(0);
+
+                    com.sincere.kboss.manager.MainActivity mainActivity = (com.sincere.kboss.manager.MainActivity) getActivity();
+                    mainActivity.gotoPrevFragment();
+                    int spot_id;
+                    if (MainActivity.g_curSpot < 0) {
+                        spot_id = 0;
+                    } else {
+                        spot_id = MainActivity.g_spots.get(MainActivity.g_curSpot).f_id;
+                    }
+                    ConfirmWorkFragment.registeredFragments.get(ConfirmWorkFragment.curFrag).updateHistoryList(Functions.getDateTimeStringFromToday(ConfirmWorkFragment.curFrag-28), spot_id);
+
+                    // by Adonis
                 }
             }
         };

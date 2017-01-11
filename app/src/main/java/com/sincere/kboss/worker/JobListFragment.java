@@ -155,7 +155,7 @@ public class JobListFragment extends FragmentTempl {
         View v = inflater.inflate(R.layout.fragment_joblist, container, false);
 
         lstItems = (PullToRefreshListView) v.findViewById(R.id.lstItems);
-        lstItems.setMode(PullToRefreshBase.Mode.PULL_FROM_END);
+        lstItems.setMode(PullToRefreshBase.Mode.PULL_FROM_START); // modified by Adonis
         lstItems.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ListView>() {
             @Override
             public void onRefresh(PullToRefreshBase<ListView> refreshView) {
@@ -224,7 +224,9 @@ public class JobListFragment extends FragmentTempl {
                     // adapter.setData(jobs);
                     workerjobs.addAll(newjobs);
                     adapter.notifyDataSetChanged();;
-                    scrollMyListViewToBottom();
+                    // modified by Adonis
+                    scrollMyListViewToTop();
+                    //scrollMyListViewToBottom();
                 }
             }
 
@@ -234,7 +236,9 @@ public class JobListFragment extends FragmentTempl {
 
                 hideProgress();
                 lstItems.onRefreshComplete();
-                scrollMyListViewToBottom();
+                // modified by Adonis
+                scrollMyListViewToTop();
+                //scrollMyListViewToBottom();
             }
 
             @Override
@@ -243,7 +247,9 @@ public class JobListFragment extends FragmentTempl {
 
                 hideProgress();
                 lstItems.onRefreshComplete();
-                scrollMyListViewToBottom();
+                // modified by Adonis
+                scrollMyListViewToTop();
+                //scrollMyListViewToBottom();
             }
         };
 
@@ -252,7 +258,8 @@ public class JobListFragment extends FragmentTempl {
         ServiceManager.inst.getJobsWorker(pagecount, ServiceParams.PAGE_SIZE, handler);
     }
 
-    private void scrollMyListViewToBottom() {
+    // modified by Adonis
+    private void scrollMyListViewToTop() {
         if(!isRefresh) return;
         if(adapter.getCount() == 0) return;
         lstItems.post(new Runnable() {
@@ -260,7 +267,8 @@ public class JobListFragment extends FragmentTempl {
             public void run() {
                 // Select the last row so it will scroll into view...
                 //lstItems.getRefreshableView().smoothScrollToPosition(adapter.getCount());
-                lstItems.getRefreshableView().setSelection(adapter.getCount()-1);
+                //lstItems.getRefreshableView().setSelection(adapter.getCount()-1);
+                lstItems.getRefreshableView().setSelection(0);
                 isRefresh = false;
             }
         });

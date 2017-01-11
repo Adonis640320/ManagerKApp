@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="Z:\original\ManagerK(1.8)\ManagerK\universalimageloader\src\main\assets"/><source path="Z:\original\ManagerK(1.8)\ManagerK\universalimageloader\build\generated\assets\shaders\release"/></dataSet><dataSet config="release"><source path="Z:\original\ManagerK(1.8)\ManagerK\universalimageloader\src\release\assets"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="Z:\original\ManagerK\universalimageloader\src\main\assets"/><source path="Z:\original\ManagerK\universalimageloader\build\generated\assets\shaders\release"/></dataSet><dataSet config="release"><source path="Z:\original\ManagerK\universalimageloader\src\release\assets"/></dataSet></merger>

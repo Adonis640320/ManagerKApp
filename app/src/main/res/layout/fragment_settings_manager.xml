@@ -243,7 +243,7 @@
 					<ImageView
 						android:layout_width="55dp"
 						android:layout_height="55dp"
-						android:background="@drawable/setting_basicinfo_blue"
+						android:background="@drawable/setting_spotconnection_blue"
 						android:layout_marginBottom="5dp"
 						/>
 					<TextView
@@ -265,7 +265,7 @@
 					<ImageView
 						android:layout_width="55dp"
 						android:layout_height="55dp"
-						android:background="@drawable/setting_security_blue"
+						android:background="@drawable/setting_office_blue"
 						android:layout_marginBottom="5dp"
 						/>
 					<TextView
@@ -293,7 +293,7 @@
 					<ImageView
 						android:layout_width="55dp"
 						android:layout_height="55dp"
-						android:background="@drawable/setting_certificate_blue"
+						android:background="@drawable/setting_security_blue"
 						android:layout_marginBottom="5dp"
 						/>
 					<TextView
@@ -321,7 +321,7 @@
 					<ImageView
 						android:layout_width="55dp"
 						android:layout_height="55dp"
-						android:background="@drawable/setting_info_blue"
+						android:background="@drawable/setting_basicinfo_blue"
 						android:layout_marginBottom="5dp"
 						/>
 					<TextView

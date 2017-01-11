@@ -466,7 +466,10 @@ public class EditJobActivity extends ActivityTempl implements DatePickerDialogFr
                     } else {
                         spot_id = MainActivity.g_spots.get(MainActivity.g_curSpot).f_id;
                     }
-                    ManageSpotFragment.registeredFragments.get(ManageSpotFragment.curFrag).updateJobList(Functions.getDateTimeStringFromToday(ManageSpotFragment.curFrag), spot_id);
+
+                    //modified by Adonis
+                    //ManageSpotFragment.registeredFragments.get(ManageSpotFragment.curFrag).updateJobList(Functions.getDateTimeStringFromToday(ManageSpotFragment.curFrag), spot_id);
+                    ManageSpotFragment.registeredFragments.get(ManageSpotFragment.curFrag).updateJobList(Functions.getDateTimeStringFromToday(ManageSpotFragment.curFrag - 28), spot_id);
                 }
                 isAPICalling = false;
             }
