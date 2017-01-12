@@ -34,7 +34,7 @@ public class STJobWorker implements Parcelable {
     public String f_owner_mphone;
     public String f_worker_address;
     // public int f_stat; // 1: 모집중, 2:
-
+    public String f_job_status; // 100: 모집완료 0:기타
     public STJobWorker() {}
 
     public STJobWorker(Parcel in) {
@@ -77,6 +77,7 @@ public class STJobWorker implements Parcelable {
         f_worker_citizen = in.readString();
         f_owner_mphone = in.readString();
         f_worker_address = in.readString();
+        f_job_status = in.readString();
     }
 
     @Override
@@ -125,6 +126,7 @@ public class STJobWorker implements Parcelable {
         dest.writeString(f_worker_citizen);
         dest.writeString(f_owner_mphone);
         dest.writeString(f_worker_address);
+        dest.writeString(f_job_status);
     }
 
     public static final Parcelable.Creator<STJobWorker> CREATOR

@@ -2,15 +2,20 @@ package com.sincere.kboss;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.loopj.android.http.JsonHttpResponseHandler;
+import com.orhanobut.android.dialogplussample.SimpleAdapter;
+import com.orhanobut.dialogplus.DialogPlus;
+import com.orhanobut.dialogplus.Holder;
+import com.orhanobut.dialogplus.OnClickListener;
+import com.orhanobut.dialogplus.ViewHolder;
 import com.sincere.kboss.global.Functions;
 import com.sincere.kboss.service.RetVal;
 import com.sincere.kboss.service.ServiceManager;
@@ -20,7 +25,6 @@ import com.sincere.kboss.stdata.STUserInfo;
 
 import org.apache.http.Header;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -97,17 +101,53 @@ public class SplashActivity extends ActivityTempl {
                 retVal = ServiceManager.inst.parseGetSysParams(response, ret);
                 if (retVal.code == ServiceParams.ERR_NONE) {
                     KbossApplication.g_sysparams = ret.get(0);
+                    // added by Adonis
+                    // 확인 버튼을 누르면 앱스토에로 이동
+                    OnClickListener clickListener = new OnClickListener() {
+                        @Override
+                        public void onClick(DialogPlus dialog, View view) {
+                            switch (view.getId()) {
+                                case R.id.btnGoStore:
 
-                    ServiceParams.baseUrl = KbossApplication.g_sysparams.f_baseurl;
-                    ServiceParams.svcBaseUrl = KbossApplication.g_sysparams.f_baseurl + "/svc/";
-                    ServiceParams.assetsBaseUrl = KbossApplication.g_sysparams.f_baseurl + "/assets/";
+                                    final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                                    try {
+                                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                                    } catch (android.content.ActivityNotFoundException anfe) {
+                                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + appPackageName)));
+                                    }
 
-                    if (KbossApplication.g_sysparams.f_link_count > 10000) {
-                        rlLinkCount.setVisibility(View.VISIBLE);
-                        lblLinkCount.setText(Functions.getLocaleNumberString(KbossApplication.g_sysparams.f_link_count,""));
+                                    break;
+                            }
+                        }
+                    } ;
+                    if(!ServiceParams.appVersionString.equals( KbossApplication.g_sysparams.f_app_version)){
+                        Holder holder = new ViewHolder(R.layout.dialog_appversion);
+                        SimpleAdapter adapter = new SimpleAdapter(SplashActivity.this, false);
+                        DialogPlus dialog = new DialogPlus.Builder(SplashActivity.this)
+                                .setContentHolder(holder)
+                                .setCancelable(true)
+                                .setGravity(DialogPlus.Gravity.CENTER)
+                                .setAdapter(adapter)
+                                .setOnClickListener(clickListener)
+                                .create();
+
+                        dialog.show();
                     }
+                    else{
 
-                    callApiGetWorkingArea();
+                        ServiceParams.baseUrl = KbossApplication.g_sysparams.f_baseurl;
+                        ServiceParams.svcBaseUrl = KbossApplication.g_sysparams.f_baseurl + "/svc/";
+                        ServiceParams.assetsBaseUrl = KbossApplication.g_sysparams.f_baseurl + "/assets/";
+
+                        if (KbossApplication.g_sysparams.f_link_count > 10000) {
+                            rlLinkCount.setVisibility(View.VISIBLE);
+                            lblLinkCount.setText(Functions.getLocaleNumberString(KbossApplication.g_sysparams.f_link_count,""));
+                        }
+
+                        callApiGetWorkingArea();
+                    }
+                    // added
+
                 }
             }
 

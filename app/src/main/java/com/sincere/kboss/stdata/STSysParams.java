@@ -13,4 +13,5 @@ public class STSysParams {
     public String f_privacy;
     public String f_baseurl;
     public int f_link_count;
+    public String f_app_version;
 }

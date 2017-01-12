@@ -103,7 +103,7 @@ public class ServiceManager {
                     anItem.f_privacy = getSafeString(dataObject, ServiceParams.F_PRIVACY);
                     anItem.f_baseurl = getSafeString(dataObject, ServiceParams.F_BASEURL);
                     anItem.f_link_count = getSafeInt(dataObject, ServiceParams.F_LINK_COUNT);
-
+                    anItem.f_app_version = getSafeString(dataObject, "f_app_version");
                     sysparams.add(anItem);
                 }
             }
@@ -1290,7 +1290,10 @@ public class ServiceManager {
                     anItem.f_manager = getSafeString(dataObject, ServiceParams.F_MANAGER);
                     anItem.f_mainbuilding = getSafeString(dataObject, ServiceParams.F_MAINBUILDING);
                     anItem.f_buildcompany = getSafeString(dataObject, ServiceParams.F_BUILDCOMPANY);
-                    anItem.f_spot_content = getSafeString(dataObject, ServiceParams.F_CONTENT);//added by Adonis
+
+                    //added by Adonis
+                    anItem.f_spot_content = getSafeString(dataObject, ServiceParams.F_CONTENT);
+                    anItem.f_job_status = getSafeString(dataObject, "f_job_status");
                     workerjobs.add(anItem);
                 }
             }

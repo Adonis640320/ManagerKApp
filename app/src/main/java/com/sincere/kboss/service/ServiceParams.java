@@ -2,14 +2,14 @@ package com.sincere.kboss.service;
 
 public class ServiceParams {
 	 //Service Address
-//    public static String baseUrl = "http://kimsojang1.kakaoapps.co.kr/";
-//    public static String svcBaseUrl = "http://kimsojang1.kakaoapps.co.kr/Svc/";
-//    public static String assetsBaseUrl = "http://kimsojang1.kakaoapps.co.kr/assets/";
-    public static String baseUrl = "http://192.168.1.109/";
-    public static String svcBaseUrl = "http://192.168.1.109/Svc/";
-    public static String assetsBaseUrl = "http://192.168.1.109/assets/";
+    public static String baseUrl = "http://kimsojang1.kakaoapps.co.kr/";
+    public static String svcBaseUrl = "http://kimsojang1.kakaoapps.co.kr/Svc/";
+    public static String assetsBaseUrl = "http://kimsojang1.kakaoapps.co.kr/assets/";
+//    public static String baseUrl = "http://192.168.1.109/";
+//    public static String svcBaseUrl = "http://192.168.1.109/Svc/";
+//    public static String assetsBaseUrl = "http://192.168.1.109/assets/";
     public static String token;
-
+    public static String appVersionString = "1.0";
     public static final int PAGE_SIZE = 20;
 
     public static final int LV_WORKER = 1;

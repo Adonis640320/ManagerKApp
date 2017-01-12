@@ -116,6 +116,8 @@ public class JobListAdapter extends BaseAdapter {
                 LinearLayout llActions02 = (LinearLayout) convertView.findViewById(R.id.llActions02);
                 LinearLayout llActions03 = (LinearLayout) convertView.findViewById(R.id.llActions03);
                 LinearLayout llActions04 = (LinearLayout) convertView.findViewById(R.id.llActions04);// 출근취소,작업취소,지원취소
+                LinearLayout llActions05 = (LinearLayout) convertView.findViewById(R.id.llActions05);// 모집완료 added by Adonis
+
                 llActions04.setTag(position);
                 final ImageView ivSupportCancel = (ImageView)convertView.findViewById(R.id.ivSupportCancel); // 지원취소
                 ivSupportCancel.setTag(position);
@@ -212,7 +214,7 @@ public class JobListAdapter extends BaseAdapter {
                 llActions02.setVisibility(View.INVISIBLE);
                 llActions03.setVisibility(View.INVISIBLE);
                 llActions04.setVisibility(View.INVISIBLE);
-
+                llActions05.setVisibility(View.INVISIBLE); // added by Adonis
                 ivSupportCancel.setVisibility(View.GONE);
                 ivSigninCancel.setVisibility(View.GONE);
 
@@ -225,6 +227,10 @@ public class JobListAdapter extends BaseAdapter {
                             ivSupportCancel.setVisibility(View.GONE);
                         else
                             ivSupportCancel.setVisibility(View.VISIBLE);
+
+                        if(anItem.f_job_status.equals("100")){
+                            llActions05.setVisibility(View.VISIBLE);
+                        }
                     } else {
 
                         llActions03.setVisibility(View.VISIBLE);
@@ -233,6 +239,8 @@ public class JobListAdapter extends BaseAdapter {
                         else
                             ivSigninCancel.setVisibility(View.VISIBLE);
                     }
+
+
                 }
 
                 if(anItem.f_support_cancel == 1 || anItem.f_signin_cancel == 1) {
@@ -251,6 +259,8 @@ public class JobListAdapter extends BaseAdapter {
                     }
                 }
                 // llActions04 will not be shown because the cancelled job will be deleted.
+
+
             }
         }
         catch (Exception ex)
