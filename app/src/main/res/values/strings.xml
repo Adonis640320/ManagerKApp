@@ -192,7 +192,7 @@
 	<string name="personalinfosetting_serviceinfo">서비스정보 </string>
 	<string name="personalinfosetting_accountjoininfo">회원가입정보  </string>
 	<string name="personalinfosetting_appversionstr">앱버전 </string> <!--added by Adonis-->
-	<string name="personalinfosetting_appversion">1.0</string> <!--added by Adonis-->
+	<string name="personalinfosetting_appversion">v 1.0</string> <!--added by Adonis-->
 	<string name="personalinfosetting_accountuseallow">회원약관 </string>
 	<string name="personalinfosetting_accountinfopolicy">개인정보취급방침 </string>
 	<string name="personalinfosetting_logout">회원탈퇴 </string>

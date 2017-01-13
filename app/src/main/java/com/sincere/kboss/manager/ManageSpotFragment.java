@@ -133,7 +133,7 @@ public class ManageSpotFragment extends FragmentTempl {
         viewPager.setAdapter(mSectionsPagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
         tabLayout.setTabMode(TabLayout.MODE_SCROLLABLE); // added by Adonis
-        viewPager.setCurrentItem(28);
+        viewPager.setCurrentItem(29);
 //        viewPager.setCurrentItem(0);
 //        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 

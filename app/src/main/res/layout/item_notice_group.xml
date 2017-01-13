@@ -27,6 +27,7 @@
             android:background="@android:color/transparent"
             android:layout_toRightOf="@id/title_tv"
             android:layout_marginTop="3dp"
+            android:layout_marginLeft="5dp"
             android:visibility="invisible"
             android:src="@drawable/badge"/>
     </RelativeLayout>

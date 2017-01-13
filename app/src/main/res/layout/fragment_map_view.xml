@@ -52,7 +52,7 @@
         android:layout_below="@id/lblSep"
         android:background="@android:color/white">
 
-        <RelativeLayout
+        <net.daum.mf.map.api.MapView
             android:id="@+id/map_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />

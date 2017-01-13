@@ -19,6 +19,7 @@ import com.sincere.kboss.stdata.STMonth;
 import com.sincere.kboss.stdata.STNotice;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -120,7 +121,20 @@ public class YearMonthDialog extends CommonDialog implements View.OnClickListene
             }
         });
 
+// added by Adonis
+        TextView  btnSelectThisMonth = (TextView) findViewById(R.id.btnSelectThisMonth);
+        btnSelectThisMonth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                cur_year=today.getYear()+1900;
+                int curMonth = today.getMonth();
+                mListner.okClick(cur_year,  curMonth + 1);
+                dismiss();
+            }
+        });
+
     }
+
     class MonthAdapter extends ArrayAdapter<STMonth>{
         LayoutInflater m_inflater;
         public MonthAdapter() {
@@ -137,7 +151,6 @@ public class YearMonthDialog extends CommonDialog implements View.OnClickListene
             final STMonth item = getItem(position);
             TextView tvContent = (TextView) convertView.findViewById(R.id.tv_content);
 
-
             tvContent.setSelected(item.isSelect);
 
             if ( item.isSelect )
@@ -150,6 +163,7 @@ public class YearMonthDialog extends CommonDialog implements View.OnClickListene
                 tvContent.setBackgroundColor(Color.WHITE);
                 tvContent.setTextColor(Color.BLACK);
             }
+
             if ( today.getMonth()==position )
             {
                 tvContent.setTextColor(Color.RED);

@@ -34,6 +34,7 @@ dependencies {
     compile 'com.google.firebase:firebase-messaging:9.0.0'
     compile files('libs/libDaumMapAndroid.jar')
     //    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    compile files('libs/libDaumMapEngineAPI.jar')
 }
 
 apply plugin: 'com.google.gms.google-services'

@@ -228,9 +228,13 @@ public class JobListAdapter extends BaseAdapter {
                         else
                             ivSupportCancel.setVisibility(View.VISIBLE);
 
+                        //added by Adonis
                         if(anItem.f_job_status.equals("100")){
+                            ivSupportCancel.setVisibility(View.GONE);
                             llActions05.setVisibility(View.VISIBLE);
                         }
+
+                        //added
                     } else {
 
                         llActions03.setVisibility(View.VISIBLE);

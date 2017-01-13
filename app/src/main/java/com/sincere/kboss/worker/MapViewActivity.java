@@ -55,12 +55,9 @@ public class MapViewActivity extends ActivityTempl implements MapView.OpenAPIKey
         MapLayout mapLayout = new MapLayout(this);
         mapView = mapLayout.getMapView();
 
-//        MapView mapView = new MapView(this);
-//        mMapView = (MapView)findViewById(R.id.map_view);
-        mapView.setDaumMapApiKey("c66045c43200c1595d8b9c687b45c55b");
-        mapView.setOpenAPIKeyAuthenticationResultListener(this);
+        mapView = (MapView)findViewById(R.id.map_view);
         mapView.setMapViewEventListener(this);
-        mapView.setMapType(MapView.MapType.Standard);
+        mapView.setDaumMapApiKey("c66045c43200c1595d8b9c687b45c55b");
 
         try {
             m_longitude = getIntent().getDoubleExtra("logitude",127.005515);
@@ -75,9 +72,6 @@ public class MapViewActivity extends ActivityTempl implements MapView.OpenAPIKey
 
         lblTitle = (TextView) findViewById(R.id.lblTitle);
         lblTitle.setText(address);
-
-        ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
-        mapViewContainer.addView(mapLayout);
     }
 
     private void controlMapTile(int which) {

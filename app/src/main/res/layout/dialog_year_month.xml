@@ -36,7 +36,8 @@
                         android:text="이번 달"
                         android:textColor="@android:color/holo_red_light"
                         android:textSize="22sp"
-                        android:background="@drawable/red_round_text"/>
+                        android:background="@drawable/red_round_text"
+                        android:id="@+id/btnSelectThisMonth"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dp"

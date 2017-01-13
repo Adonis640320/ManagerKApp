@@ -309,14 +309,14 @@ public class SplashActivity extends ActivityTempl {
                 if (retVal.code != ServiceParams.ERR_NONE) {
                     Functions.showToast(SplashActivity.this, retVal.msg);
                 } else {
-                    gotoLoginActivity();
-                    /*
+//                    gotoLoginActivity();
+
                     if (Functions.loadUserInfo(getApplicationContext())) {
                         callApiLoginSec();
                     } else {
                         gotoLoginActivity();
                     }
-                    */
+
                 }
             }
         };
